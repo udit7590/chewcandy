@@ -1,0 +1,45 @@
+<div class="btn-group">
+  <button type="button" class="button button-sp dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="background-color: transparent; color: #fff; border: none" type="button" id="shoppingCartButton">
+    <%= image_tag('cart-icon.png', size: '24x24', title: "Your candy bag", data: { toggle: "tooltip", placement: "bottom" }) %>&nbsp; 
+    <span data-toggle="tooltip" data-placement="bottom" class="badge" title="Grams/Pieces"><%= cart.shopping_cart_items.sum(:quantity) %></span>
+  </button>
+  <!-- FILLED SHOPPING CART ITEMS LIST CONTAINER -->
+  <ul id="shoppingCartDropDown" class="dropdown-menu shopping-cart-drop-down <%= 'hidden' if (cart.nil? || cart.empty? ) %>" role="menu">
+    <li>
+      <table>
+      <% cart.shopping_cart_items.each do |item| %>
+        <% item = item.decorate %>
+        <tr style="margin-left: 25px; size: 16px" data-product-id="<%= item.product_id %>">
+          <td><%= item.product.name %></td>
+          <td><%= item.display_quantity %></td>
+          <td><%= item.display_amount %></td>
+          <td class="pull-right"><%= image_tag 'remove.png', size: '25x25' %></td>
+        </tr>
+        <% end %>
+      </table>
+    </li>
+    <li class="divider"></li>
+    <li style="padding: 5px 25px"><%= annotation_message(AnnotationsHelper::ANNOTATION_HUMAN[:prices_inclusive_taxes]) %></li>
+    <li style="padding: 5px 25px">
+      <button class="btn btn-danger empty-cart cart-container-button">Empty</button>
+      <a class="btn btn-primary pull-right checkout-cart cart-container-button" style="width: 150px; color: #fff" href="<%= checkout_orders_path %>">Checkout</a>
+    </li>
+  </ul>
+  <!-- END -->
+
+  <!-- EMPTY SHOPPING CART CONTAINER -->
+  <ul id="shoppingCartDropDownEmpty" class="dropdown-menu shopping-cart-drop-down hidden" role="menu">
+    <li>
+      <table>
+        <tr style="margin-left: 25px; size: 16px">
+          <td style="font-style: italic; text-align: center; color: #c13100; cursor: default">Your bag is empty</td>
+        </tr>
+      </table>
+    </li>
+    <li class="divider"></li>
+    <li style="padding: 5px 25px">
+      <%= link_to 'Shop Now for Candies', root_path + '#candyProducts', class: 'btn btn-info btn-block', style: 'color: #fff' %>
+    </li>
+  </ul>
+  <!-- END -->
+</div>

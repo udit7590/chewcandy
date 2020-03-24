@@ -1,0 +1,9 @@
+var $modalBox = $("#registrationModal");
+
+$modalBox.modal('hide');
+$modalBox.find('form').trigger('reset');
+$("div.modal-body div.alert-error").remove();
+$modalBox.find('input[type=submit]').click(function() {
+  $(this).removeAttr("disabled");
+});
+window.location = '<%= @redirect_to_path %>'

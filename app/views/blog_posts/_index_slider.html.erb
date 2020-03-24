@@ -1,0 +1,13 @@
+<div class="clearfix slider">
+  <ul class="pgwSlider">
+    <% recent_posts.limit(3).each do |post| %>
+      <li><img src="<%= post.image.url(:blog_index_thumb) %>" alt="<%= post.tag_list %>" data-description="<%= post.title.truncate(50) %>" data-large-src="<%= post.image.url(:blog_index) %>"/></li>
+    <% end %>
+    <!-- <li><img src="/assets/images/thumbs/wall-e.jpg" alt="Montréal, QC, Canada" data-large-src="/assets/images/slides/wall-e.jpg" data-description="Eiffel Tower and Champ de Mars"/></li>
+    <li>
+      <img src="/assets/images/thumbs/up-official-trailer-fake.jpg" alt="Shanghai, China" data-large-src="/assets/images/slides/up-official-trailer-fake.jpg" data-description="Shanghai ,chaina">
+    </li> -->
+
+
+  </ul>
+</div>

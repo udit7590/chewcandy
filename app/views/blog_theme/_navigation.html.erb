@@ -1,0 +1,36 @@
+<section id="header_area">
+  <div class="wrapper header">
+    <div class="clearfix header_top">
+      <div class="clearfix logo floatleft">
+        <a href="<%= root_path %>"><img id="bootstrapTourStep1" src="<%= I18n.t('site.logo_path') %>" width="120" height="40" alt="Logo" />
+        <h1 style="display: inline; font-size: 24px;"> &nbsp;<span> B</span>log</h1></a>
+      </div>
+      <!-- (TODO: SEARCH) <div class="clearfix search floatright">
+        <form>
+          <input type="text" placeholder="Search"/>
+          <input type="submit" />
+        </form>
+      </div> -->
+    </div>
+    <div class="header_bottom">
+      <nav>
+        <ul id="nav">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Buy Candies', root_path + '#candyProducts' %></li>
+          <li class='active'><%= link_to 'Blog', blog_posts_path %></li>
+          <li><%= link_to 'Contact us', root_path + '#contact' %></li>
+          <li><%= link_to 'About us', about_us_path %></li>
+          <% if @user.admin? %>
+            <li id="dropdown"><a href="">Admin Actions</a>
+              <ul>
+                <li><a href="<%= new_blog_post_path %>">New Blog Post</a></li>
+                <li><%= link_to 'Backend Area', orders_path %></li>
+                <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+              </ul>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+<!-- Subscription section start -->
+<div id="subscriptions" class="section secondary-section">
+  <div class="container">
+    <div class="title">
+      <h1><%= I18n.t('pages.subscriptions.heading') %></h1>
+      <p><%= I18n.t('pages.subscriptions.sub_heading') %></p>
+    </div>
+    <div class="price-table row-fluid">
+      <div class="span4 price-column">
+        <h3>Monthly Plan</h3>
+        <ul class="list">
+          <li class="price">COMING SOON</li>
+        </ul>
+        <%= image_tag 'subscriptions/subscription_month.png' %>
+        <br /><br /><br />
+        <%# link_to 'Start Now', new_subscriptions_path(plan_id: Plan.monthly.id), class: 'button button-ps' %>
+        <!-- UDIT- ACTIVATE ABOVE LINK -->
+      </div>
+      <div class="span4 price-column">
+        <h3>Half-Yearly Plan</h3>
+        <ul class="list">
+          <li class="price">COMING SOON</li>
+        </ul>
+        <%= image_tag 'subscriptions/subscription_half_yearly.png' %>
+        <br /><br /><br />
+
+        <%# link_to 'Start Now', new_subscriptions_path(plan_id: Plan.half_yearly.id), class: 'button button-ps' %>
+        <!-- UDIT- ACTIVATE ABOVE LINK -->
+      </div>
+      <!-- <div class="span4 price-column" style="; margin-top: -50px; border: 3px solid #000"> -->
+        <!-- UDIT- ACTIVATE ABOVE DIV -->
+      <div class="span4 price-column" style="border: 3px solid #000; height: 490px">
+        <h3>Yearly Plan</h3>
+        <ul class="list">
+          <li class="price">COMING SOON</li>
+          <!-- <li><strong>Free</strong> Setup</li>
+          <li><strong>24/7</strong> Support</li>
+          <li><strong>50 GB</strong> File Storage</li> -->
+        </ul>
+        <%# image_tag 'subscriptions/subscription_yearly3.png' %>
+        <!-- UDIT- ACTIVATE ABOVE IMAGE -->
+        <%= image_tag 'subscriptions/subscription_half_yearly.png' %>
+        <br /><br /><br /><br />
+        <%# link_to 'Start Now', new_subscriptions_path(plan_id: Plan.yearly.id), class: 'button button-ps' %>
+        <!-- UDIT- ACTIVATE ABOVE LINK -->
+        <!-- <a href="#" class="button button-ps">Start Now</a> -->
+      </div>
+    </div>
+    <div class="centered">
+      <p class="price-text"><%= I18n.t('pages.subscriptions.contact_heading') %></p>
+      <!-- <a href="#contact" class="button">Contact Us</a> -->
+      <hr />
+    </div>
+  </div>
+</div>
+<!-- Subscription section end -->

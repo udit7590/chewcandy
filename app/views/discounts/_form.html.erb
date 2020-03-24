@@ -1,0 +1,82 @@
+
+<%= form_for @discount do |f| %>
+  <fieldset>
+
+    <%= render 'errors' %>
+
+    <div class="control-group">
+      <%= f.label :code, class: 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :code, class: 'input-xlarge', placeholder: 'Code*', size: 46, required: true %>
+      </div>
+    </div>
+
+    <br /><hr />
+    <div class="control-group">
+      <%= f.label :amount, class: 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :amount, class: 'input-xlarge', placeholder: 'Amount*', size: 46, required: true %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :unit, class: 'control-label' %>
+      <div class="controls">
+        <%= f.select :unit, Discount::AMOUNT_UNITS.map { |unit| [unit, unit.downcase] }, { include_blank: false } %>
+        <p> </p>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :max_amount, class: 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :max_amount, class: 'input-xlarge', placeholder: 'Max amount', size: 46 %>
+      </div>
+    </div>
+    <hr /><br />
+
+    <h4>Simple Criteria:</h4>
+    <p>Enter the email id or the user id to make this discount coupon to be attached with it.</p>
+
+    <div class="control-group">
+      <%= f.label :email, class: 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :email, class: 'input-xlarge', placeholder: 'Email Id', size: 46 %>
+      </div>
+    </div>
+
+    <p style="margin-left: 160px; font-weight: bold; color: red">OR</p>
+
+    <div class="control-group">
+      <%= f.label :user_id, class: 'control-label' %>
+      <div class="controls">
+        <%# f.select :user_id, User.registered.map { |user| [user.name + '(' + user.email + ')', user.id] }, { include_blank: true } %>
+        <%= f.text_field :user_id, class: 'input-xlarge', placeholder: 'Registered User Id', size: 46 %>
+        <p> </p>
+      </div>
+    </div>
+
+    <hr />
+    <h4>Complex Criterias:</h4>
+    <p>Check all that apply or create a <%= link_to 'new', new_criterium_path %> one:</p>
+    <div class="control-group">
+      <%= f.label :criteria_ids, class: 'control-label' %>
+      <div class="controls">
+        <%# f.select :user_id, User.registered.map { |user| [user.name + '(' + user.email + ')', user.id] }, { include_blank: true } %>
+        <%# f.collection_check_boxes :criteria_ids, Criteria.all, :id, :name %>
+        <p> </p>
+      </div>
+    </div>
+
+    <hr class="clear" />
+    <br /><br />
+    <div class="control-group">
+      <div class="controls">
+        <%= f.submit 'Save', class: 'btn btn-large btn-inverse' %>
+      </div>
+    </div>
+    <br />
+    <%= link_to 'New Criterium', new_criterium_path, class: 'back-link' %>
+    <%= link_to 'Back to Discounts', discounts_path, class: 'back-link' %>
+  </fieldset>
+<% end %>

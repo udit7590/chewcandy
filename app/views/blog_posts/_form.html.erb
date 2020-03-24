@@ -1,0 +1,80 @@
+<div class="clearfix main_content floatleft">
+  <%= form_for @blog_post do |f| %>
+
+    <% render 'errors' %>
+
+    <div class="control-group">
+      <%= f.label :title, class: 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :title, class: 'input-xlarge', placeholder: 'Post Title*', size: 250, required: true %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :slug, class: 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :slug, class: 'input-xlarge', placeholder: 'Slug*', size: 250, required: true %>
+      </div>
+      <p>For SEO friendly URLs. Make it hyphen seperated name for good reasons.</p>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :tag_list, class: 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :tag_list, class: 'input-xlarge', placeholder: 'Tag List*', size: 200, required: true %>
+      </div>
+      <p>Comma Seperated</p>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :html_overview, class: 'control-label' %>
+      <div class="controls">
+        <%= f.cktext_area :html_overview, class: 'input-xlarge', placeholder: 'Overview*', rows: 10, cols: 100, required: true %>
+      </div>
+      <p>For Index Page. We show Read More after this content.</p>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :html_content, class: 'control-label' %>
+      <div class="controls">
+        <%= f.cktext_area :html_content, class: 'input-xlarge ckeditor', placeholder: 'Post Content*', rows: 40, cols: 100, required: true %>
+      </div>
+      <p>For Actual Post Page</p>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :image, class: 'control-label' %>
+      <div class="controls">
+        <%= f.file_field :image, multiple: false %>
+      </div>
+      <p>Main Title Image. Can also be used with facebook and elsewhere.</p>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :video_url, class: 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :video_url, class: 'input-xlarge', placeholder: 'Video URL*', size: 200 %>
+      </div>
+      <p>(Youtube for now)</p>
+    </div>
+
+    <% if f.object.image.present? %>
+      <%= image_tag f.object.image.url(:preview) %>
+    <% end %>
+
+    <div class="control-group">
+      <%= f.label :published, 'Publish the post', class: 'control-label' %>
+      <div class="controls">
+        <%= f.check_box :published, class: 'input-xlarge' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <%= f.submit 'Save', class: 'btn btn-large btn-inverse' %>
+      </div>
+    </div>
+
+    <%= link_to 'Back to Posts', blog_posts_path, class: 'back-link' %>
+  <% end %>
+</div>

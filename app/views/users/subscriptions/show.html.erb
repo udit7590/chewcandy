@@ -1,0 +1,100 @@
+<!-- Start user orders section -->
+<div class="section secondary-section" id="myOrders">
+  <div class="section third-section" id="checkoutForm" style="min-height: 530px;">
+  <%= render 'shared_user_form/error' %>
+    <div class="container newsletter">
+      <div class="sub-section">
+        <div class="title clearfix">
+          <div class="pull-left">
+            <h3>Your subscription details</h3>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <table>
+          <tr>
+            <td style="width: 250px"><span class="special-text">Your subscription ID: </span></td>
+            <td><strong class="normal-text"><%= @subscription.id %></strong></td>
+          </tr>
+          <tr>
+            <td><span class="special-text">Subscription State:</span></td>
+            <td><strong class="normal-text"><%= @subscription.status %></strong></td>
+          </tr>
+          <tr>
+            <td><span class="special-text">Placed On: </span></td>
+            <td><strong class="normal-text"><%= @subscription.created_at.to_s(:long) %></strong></td>
+          </tr>
+          <tr>
+            <td><span class="special-text">Boxes Delivered: </span></td>
+            <td><strong class="normal-text"><%= @subscription.units_delivered %> Of <%= @subscription.plan.units %></strong></td>
+          </tr>
+          <tr>
+            <td><span class="special-text">Amount Collected: </span></td>
+            <td><strong class="normal-text">INR <%= @subscription.collected_amount %> Of <%= @subscription.amount %></strong></td>
+          </tr>
+        </table>
+      </div>
+      <br />
+
+      <% if @subscription.details.present? %>
+        <table class="table-info">
+          <thead>
+            <tr>
+              <th>Detail #</th>
+              <th>Status</th>
+              <th>On</th>
+              <th>Boxes Delivered</th>
+              <th>Amount Collected</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @subscription.details.each_with_index do |detail, index| %>
+              <tr>
+                <td><%= index + 1 %></td>
+                <td><%= detail.status_string %></td>
+                <td><%= detail.updated_at.to_s(:long) %></td>
+                <td><%= detail.units.to_s %></td>
+                <td><em>INR </em><%= detail.last_payment_received.to_s.presence || 0 %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <h3 class="text-error">There are no transactions associated with this subscription</h3>
+      <% end %>
+      <% if @subscription.cancelled? && @subscription.refund.present? %>
+        <hr />
+        <h3>You have a refund associated with this subscription: </h3>
+        <table class="table-info">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Status</th>
+              <th>Created At</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= @subscription.refund.id %></td>
+              <td><%= @subscription.refund.complete? ? 'Completed' : 'Pending' %></td>
+              <td><%= @subscription.refund.created_at.to_s(:long) %></td>
+              <td><em>INR </em><%= @subscription.refund.amount.to_s %></td>
+            </tr>
+          </tbody>
+        </table>
+      <% end %>
+      <br />
+      <div>
+        <% link_to 'Back To My Subscriptions', users_subscriptions_path, class: 'btn btn-primary span3' %>
+        <% if @subscription.active? %>
+          <%= render partial: 'modals/cancel_subscription', locals: { subscription: @subscription } %>
+          <a type="button" data-toggle="modal" data-target="#cancelSubscriptionModal" class='btn btn-warning span3 pull-right'>Cancel My Subscription</a>
+          <% link_to 'Cancel My Subscription', cancel_users_subscription_path(@subscription), method: :post, class: 'btn btn-warning span3 pull-right', data: { confirm: 'Are you sure you want to cancel this subscription?' } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End user orders section -->

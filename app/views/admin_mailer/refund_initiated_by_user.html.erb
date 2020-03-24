@@ -1,0 +1,9 @@
+<p><%= @user.name %> has asked for a refund for his/her order.</p>
+<p>
+  <%= link_to 'Click here to look at the order', order_url(@order) %>
+</p>
+<% if @order.refund.present? %>
+  <p>
+    Reason Given: <%= @order.refund.comments %>
+  </p>
+<% end %>

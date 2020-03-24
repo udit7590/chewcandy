@@ -1,0 +1,5 @@
+<div class="alert alert-error" style="color: red">
+  <% @criterium.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+</div>

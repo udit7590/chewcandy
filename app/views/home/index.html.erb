@@ -1,0 +1,40 @@
+<!-- TODO_CR: Title - Keep names of products as famous keywords -->
+<%
+  @title  = if params[:candy_name].present?
+              params[:candy_name].humanize.gsub('-', ' ')
+            else
+              'ChewCandy- Online Candy Store'
+            end
+
+%>
+
+<% content_for :meta_description do %>
+  <meta name="description" content="ChewCandy is a one stop solution for all your candies needs picked from all over the world. Our concept allows you to choose how much of each candy type you need and accordingly build the order." />
+  <meta property="og:title" content="ChewCandy - Online Candy Store" />
+  <meta property="og:image" content="<%= image_url 'home/og_image.jpg' %>" />
+
+  <!-- TODO_CR: Adding a canonical url to index path because index path already has all the products. See Google Canonical URLs for more. -->
+  <% if params[:candy_name].present? && @product.present? %>
+    <link rel="canonical" href="<%= root_url %>" />
+    <meta property="og:title" content="<%= @product.name %>" />
+    <meta property="og:url" content="<%= my_candy_url(candy_name: params[:candy_name]) %>" />
+    <meta property="og:image" content="<%= @product.image.url(:preview) %>" />
+    <meta property="og:description" content="<%= @product.description %>" />
+    <meta property="og:site_name" content="ChewCandy" />
+    <meta property="fb:app_id" content="1143560065654157" />
+  <% end %>
+
+<% end %>
+
+<% content_for :javascripts do %>
+  <!-- TODO_CR: Make sure candy in url is highligted -->
+  <% if params[:candy_name].present? %>
+    <script type="text/javascript">
+      $(function(){ triggerUrlCandyListing('<%= my_candy_path(candy_name: params[:candy_name]) %>'); });
+    </script>
+  <% end %>
+<% end %>
+
+<% content_for :bootstrap_tour do %>
+  <%= javascript_include_tag 'bootstrap_tours/home.js' %>
+<% end %>

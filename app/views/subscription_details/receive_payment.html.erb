@@ -1,0 +1,17 @@
+<div class="admin-section" style="margin: auto; width: 1000px">
+  <%= render 'admin_shared/flash' %>
+
+  <%= render 'admin_shared/navigation' %>
+  
+  <hr />
+
+  <%= form_for(@subscription_detail, url: payment_received_subscription_detail_path(@subscription_detail), method: :patch) do |f| %>
+    <p>Subscription ID: <%= link_to f.object.subscription.id, subscription_path(f.object.subscription) %></p>
+    <p>Last Dispatched At: <%= @subscription_detail.last_dispatched_at.to_s(:long) %></p>
+    <p>Last Delivered At: <%= @subscription_detail.last_delivered_at.to_s(:long) %></p>
+
+    <%= f.label :last_payment_received %>:
+    INR <%= f.number_field :last_payment_received, required: true %><br /><br />
+    <%= f.submit 'Receive Payment', class: 'btn btn-primary' %>
+  <% end %>
+</div>

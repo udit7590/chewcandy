@@ -1,0 +1,46 @@
+<div class="row-fluid">
+  <div class="span5">
+    <p>Your Personal Details</p>
+  </div>
+  <div class="span7">
+    <%= f.text_field :first_name, class: 'span4', placeholder: 'First Name *', required: true %>
+    &nbsp;&nbsp;
+    <%= f.text_field :last_name, class: 'span4', placeholder: 'Last Name *', required: true %>
+    <%= f.text_field :phone_number, class: 'span8', placeholder: 'Phone Number *', required: true %>
+    <% if @user.guest? %>
+    <%= f.email_field :email, class: 'span8', placeholder: 'Email *', required: true, value: '' %>
+    <% end %>
+  </div>
+</div>
+<hr />
+<div class="row-fluid">
+  <div class="span5">
+    <p>Your Billing Address Details</p>
+  </div>
+  <div class="span7">
+    <% @billing_address = @user.billing_address || @user.build_billing_address %>
+    <%= f.fields_for :billing_address do |b_address_form| %>
+    <%= render partial: 'shared_user_form/address_form', locals: { f: b_address_form } %>
+    <% end %>
+  </div>
+</div>
+<hr />
+<div class="row-fluid">
+  <div class="span5">
+    <p>Your Shipping Address Details</p>
+  </div>
+  <div class="span7">
+    <% @shipping_address = @user.shipping_address || @user.build_shipping_address %>
+    <div class="span8 pull-right order-checkbox squaredThree">
+      <%= f.check_box :same_as_billing_address, class: 'css-checkbox lrg' %>
+      <%= f.label :same_as_billing_address, class: 'css-label lrg web-two-style' %>
+    </div>
+    <br /><br />
+    <%= f.fields_for :shipping_address do |s_address_form| %>
+    <div id="shippingAddressContainer">
+      <%= render partial: 'shared_user_form/address_form', locals: { f: s_address_form } %>
+    </div>
+    <% end %>
+  </div>
+</div>
+<hr />

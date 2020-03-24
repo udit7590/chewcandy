@@ -1,0 +1,76 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="#" class="brand">
+        <img src="/assets/images/logo.png" width="120" height="40" alt="Logo" />
+        <!-- This is website logo -->
+      </a>
+      <!-- Navigation button, visible on small resolution -->
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <i class="icon-menu"></i>
+      </button>
+      <!-- Main navigation -->
+      <div class="nav-collapse collapse pull-right">
+        <ul class="nav" id="top-navigation">
+          <li class="<%= 'active' if controller_name == 'home' %>"><%= link_to 'Home', root_path + '#home' %></li>
+          <li><%= link_to 'Our Candies', root_path + '#candyProducts' %></li>
+          <!--<li><% link_to 'About', root_path + '#about' %></li> -->
+          <li><%= link_to 'Subscription', root_path + '#subscriptions' %></li>
+          <li><%= link_to 'Contact', root_path + '#contact' %></li>
+          <% if nobody_logged_in? %>
+            <li><a type="button" data-toggle="modal" data-target="#loginModal">Login</a></li>
+            <li><a type="button" data-toggle="modal" data-target="#registrationModal">Register</a></li>
+          <% else %>
+            <% if @user.admin? %>
+              <li><%= link_to 'Admin', orders_path %></li>
+            <% end %>
+            <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+            <li>
+              <!-- Single button -->
+              <div class="btn-group">
+                <a type="button" data-toggle="dropdown" aria-expanded="false">
+                  <%= image_tag('account.png', size: '28x28', title: "My Account", style: 'margin-top: 13px', data: { toggle: "tooltip", placement: "bottom" }) %>
+                </a>
+                <ul class="dropdown-menu account-menu-drop-down" role="menu">
+                  <li><%= link_to 'My Orders', users_orders_path %></li>
+                  <li><%= link_to 'My Subscriptions', users_subscriptions_path %></li>
+                  <li><%= link_to 'My Refunds', users_refunds_path %></li>
+                  <li><%= link_to 'Change My Password', edit_user_registration_path %></li>
+                </ul>
+              </div>
+            </li>
+          <% end %>
+          <li>
+            <!-- Single button -->
+            <div class="btn-group pull-right">
+              <button type="button" class="button button-sp dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="background-color: transparent; color: #fff; border: none" id="shoppingCartButton">
+                <%= image_tag('cart-icon.png', size: '24x24', title: "Your candy bag", data: { toggle: "tooltip", placement: "bottom" }) %>&nbsp; 
+                <span data-toggle="tooltip" data-placement="bottom" class="badge" title="Grams"><%= @cart.shopping_cart_items.sum(:quantity) %></span>
+              </button>
+              <ul id="shoppingCartDropDown" class="dropdown-menu shopping-cart-drop-down <%= 'hidden' if (@cart.nil? || @cart.empty? ) %>" role="menu">
+                <li>
+                  <table>
+                    <% @cart.shopping_cart_items.each do |item| %>
+                      <tr style="margin-left: 25px; size: 16px" data-product-id="<%= item.product_id %>">
+                        <td><%= item.product.name %></td>
+                        <td><%= item.quantity %> Grams</td>
+                        <td>INR <%= item.amount %></td>
+                        <td class="pull-right"><a href="#"><%= image_tag 'remove.png', size: '25x25' %></a></td>
+                      </tr>
+                    <% end %>
+                  </table>
+                </li>
+                <li class="divider"></li>
+                <li style="padding: 5px 25px">
+                  <button class="btn btn-danger empty-cart" style="width: 150px">Empty</button>
+                  <button class="btn btn-primary pull-right" style="width: 150px">Checkout</button>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- End main navigation -->
+    </div>
+  </div>
+</div>

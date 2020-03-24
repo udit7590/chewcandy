@@ -1,0 +1,104 @@
+
+<%= form_for @product do |f| %>
+<fieldset>
+
+  <%= render 'errors' %>
+
+  <div class="control-group">
+    <%= f.label :name, class: 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, class: 'input-xlarge', placeholder: 'Candy Name*', size: 46, required: true %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :slug, class: 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :slug, class: 'input-xlarge', placeholder: 'Slug*', size: 46, required: true %>
+    </div>
+    <p>For SEO friendly USLs. Make it hyphen seperated name for good reasons.</p>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :price, class: 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :price, class: 'input-xlarge', placeholder: 'Original Price*', size: 46, required: true, step: 1, max: 10000000 %> (Per 'min_quantity' - IN INR)
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :min_quantity, class: 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :min_quantity, class: 'input-xlarge', placeholder: 'Min Quantity to Order*', size: 46, required: true, step: 1, max: 10000000 %> (Unit specified by 'min_quantity_unit')
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :min_quantity_unit, class: 'control-label' %>
+    <div class="controls">
+      <%= f.select :min_quantity_unit, Product::MIN_QUANTITY_UNIT_TYPES.map { |unit| [unit.humanize, unit] }, { include_blank: false } %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :tax_inclusive, 'Type', class: 'control-label' %>
+    <div class="controls">
+      <%= f.select :tax_inclusive, Product::PRICE_COMPOSITION.map { |com| [com[0].humanize, com[1]] }, { include_blank: false } %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :food_type, 'Type', class: 'control-label' %>
+    <div class="controls">
+      <%= f.select :food_type, Product::FOOD_TYPES.map { |unit| [unit.humanize, unit] }, { include_blank: false } %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :ingredients, class: 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :ingredients, class: 'input-xlarge', placeholder: 'Candy Ingredients*', rows: 15, cols: 60, required: true %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :stock, class: 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :stock, class: 'input-xlarge', placeholder: 'Available', size: 46, step: 10 %>
+      (In Grams)
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :category, class: 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :category, class: 'input-xlarge', placeholder: 'Category (Sugar-Coated | Hard | Etc)*', size: 56, required: true %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :description, class: 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :description, class: 'input-xlarge', placeholder: 'Candy Description*', rows: 15, cols: 60, required: true %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :image, class: 'control-label' %>
+    <div class="controls">
+      <%= f.file_field :image, multiple: false %>
+    </div>
+  </div>
+
+  <% if f.object.image.present? %>
+    <%= image_tag f.object.image.url(:preview) %>
+  <% end %>
+
+  <div class="control-group">
+    <div class="controls">
+      <%= f.submit 'Save', class: 'btn btn-large btn-inverse' %>
+    </div>
+  </div>
+  <%= link_to 'Back to Products', products_path, class: 'back-link' %>
+</fieldset>
+<% end %>

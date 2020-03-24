@@ -1,0 +1,12 @@
+<div class="more_post">
+  <h2>New Comment:</h2>
+  <%= form_for [@blog_post, Comment.new], html: { id: 'new-blog-post-comment-form' } do |f| %>
+    <% if @user.guest? %>
+      <p><%= f.text_field :full_name, placeholder: "Full Name*", class: 'wpcf7-text', required: true %></p>
+      <p><%= f.text_field :email, placeholder: "Email*", class: 'wpcf7-text', required: true %></p>
+    <% end %>
+    <p><%= f.text_area :body, placeholder: "Message*", rows: "10", required: true %></p>
+    <p><%= f.submit "Post Comment" %></p>
+
+  <% end %>
+</div>

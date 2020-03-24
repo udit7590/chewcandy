@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= yield :meta_description %>
+  <title><%= @title.presence || 'ChewCandy' %></title>
+  <!-- Load Roboto font -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <!-- Load css styles -->
+  <%= stylesheet_link_tag    'theme', media: 'all', 'data-turbolinks-track' => true %>
+  <!--[if IE 7]>
+      <link rel="stylesheet" type="text/css" href="css/pluton-ie7.css" />
+  <![endif]-->
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/ico/apple-touch-icon-144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/ico/apple-touch-icon-114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72.png">
+  <link rel="apple-touch-icon-precomposed" href="/assets/images/ico/apple-touch-icon-57.png">
+  <link rel="shortcut icon" href="/assets/images/ico/favicon.ico">
+  <%= stylesheet_link_tag 'custom', media: 'all', 'data-turbolinks-track' => true %>
+  <%= yield :stylesheets %>
+  <%= csrf_meta_tags %>
+
+  <!-- FACEBOOK PIXEL -->
+  <%= render 'snippets/facebook_pixel' %>
+  <!-- End FB PIXEL -->
+</head>
+<body>
+
+  <!-- Google Tag Manager -->
+  <%= render 'snippets/gtm' %>
+  <!-- End Google Tag Manager -->
+
+  <!-- FB SDK -->
+  <%= render 'snippets/fb_sdk' %>
+  <!-- End FB SDK -->
+
+  <%= render 'theme/flash' %>
+  <%= render 'theme/navigation' %>
+  <%= render 'theme/upper_bar' %>
+  <%= render 'theme/home' %>
+  <%= render 'theme/products' %>
+  <%= yield %>
+  <% render 'theme/about_us' %>
+  <%= render 'theme/other_solutions' %>
+  <% render 'theme/newsletter' %>
+  <%= render 'theme/contact_us' %>
+  <%= render 'theme/footer' %>
+  <% if nobody_logged_in? %>
+    <%= render 'theme/modals' %>
+  <% end %>
+  
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'theme', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'user/login_register', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'cart/shopping_cart', 'data-turbolinks-track' => true %>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;callback=initializeMap"></script>
+  <%= yield :javascripts %>
+  <!-- css3-mediaqueries.js for IE8 or older -->
+  <!--[if lt IE 9]>
+      <script src="js/respond.min.js"></script>
+  <![endif]-->
+
+  <%= yield :bootstrap_tour %>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<div class="clearfix sidebar_container floatright">
+    
+  <!-- (TODO: NEWSLETTER) <div class="clearfix newsletter">
+    <form href="" method="post">
+      <h2>Signup for newsletter</h2>
+      <input type="text" placeholder="Name" id="mce-TEXT"/>
+      <input type="email" placeholder="Email" id="mce-EMAIL"/>
+      <input type="submit" value="Submit" id="mc-embedded-subscribe"/>
+    </form>
+  </div> -->
+  <div class="clearfix sidebar">
+    <div class="clearfix single_sidebar category_items">
+      <h2>Tags</h2>
+      <ul>
+        <% BlogPost.tag_counts.order('tags_count desc').each do |tag_with_count| %>
+          <li class="cat-item"><%= link_to(tag_with_count.name.humanize, tagged_blog_posts_path(name: tag_with_count.name)) %>(<%= tag_with_count.taggings_count %>)</li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="clearfix single_sidebar">
+      <div class="popular_post">
+        <div class="sidebar_title"><h2>Recent Posts</h2></div>
+        <ul>
+          <% recent_posts.each do |recent_post| %>
+            <li title="<%= recent_post.title %>"><%= link_to recent_post.title.truncate(72).humanize, blog_post_path(recent_post) %></li>
+          <% end %>
+        </ul>
+      </div>
+      </div>
+    <!-- (TODO: POPULAR POSTS) <div class="clearfix single_sidebar">
+      <h2>Popular Posts</h2>
+      <ul>
+        <li><a href="">Category Name <span>(12)</span></a></li>
+        <li><a href="">Category Name <span>(12)</span></a></li>
+        <li><a href="">Category Name <span>(12)</span></a></li>
+        <li><a href="">Category Name <span>(12)</span></a></li>
+        <li><a href="">Category Name <span>(12)</span></a></li>
+      </ul>
+    </div> -->
+  </div>
+</div>

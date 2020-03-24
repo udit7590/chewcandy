@@ -1,0 +1,10 @@
+<!-- Start checkout section -->
+<div class="section secondary-section" id="checkout">
+  <div class="triangle"></div>
+  <br />
+  <%= render 'form' %>
+</div>
+
+<% content_for :javascripts do %>
+  <%= javascript_include_tag 'order/order_form' %>
+<% end %>

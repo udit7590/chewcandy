@@ -1,0 +1,15 @@
+<% if @user.errors.present? || @subscription.try(:errors).present? || @order.try(:errors).present? %>
+  <div class="error-checkout-container">
+      <ul>
+        <% @user.present? && @user.errors.full_messages.each do |error_msg| %>
+          <li><%= error_msg %></li>
+        <% end %>
+        <% @subscription.present? && @subscription.errors.full_messages.each do |error_msg| %>
+          <li><%= error_msg %></li>
+        <% end %>
+        <% @order.present? && @order.errors.full_messages.each do |error_msg| %>
+          <li><%= error_msg %></li>
+        <% end %>
+      </ul>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<tr>
+  <td><%= subscription.id %></td>
+  <td><%= subscription.created_at.to_s(:long) %></td>
+  <td class="special-text-blue"><%= subscription.status %></td>
+  <td><%= subscription.units_delivered %> <span class='text-unit'>Of <%= subscription.plan.units %></span></td>
+  <td><span class='text-unit'>INR </span><%= subscription.collected_amount %> <span class='text-unit'>Of <%= subscription.amount %></span></td>
+  <td>
+  <%= link_to 'View', users_subscription_path(subscription.id), class: 'btn btn-info' %>
+  <% if subscription.active? %>
+    <%= render partial: 'modals/cancel_subscription', locals: { subscription: subscription } %>
+    <a type="button" data-toggle="modal" data-target="#cancelSubscriptionModal" class='btn btn-warning'>Cancel</a>
+  <% end %>
+  </td>
+</tr>

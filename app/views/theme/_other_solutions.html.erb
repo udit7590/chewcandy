@@ -1,0 +1,41 @@
+<!-- Subscription section start -->
+<div id="other_solutions" class="section secondary-section">
+  <div class="container">
+    <div class="title">
+      <h1><%= I18n.t('pages.other_solutions.heading') %></h1>
+      <p><%= I18n.t('pages.other_solutions.sub_heading') %></p>
+    </div>
+    <div class="price-table row-fluid">
+      <div class="span4 price-column">
+        <h3>Birthday Gifts</h3>
+        <ul class="list">
+          <li class="price">Cakes and Candies</li>
+        </ul>
+        <%= image_tag 'other_solutions/birthday.png' %>
+        <br /><br /><br />
+        <a type="button" data-toggle="modal" data-target="#enquiryModal" class='button button-ps'>Enquire</a>
+        <%# link_to 'Start Now', new_subscriptions_path(plan_id: Plan.monthly.id), class: 'button button-ps' %>
+      </div>
+      <div class="span4 price-column">
+        <h3 style="font-size: 24px">Wedding Candy Buffet</h3>
+        <ul class="list">
+          <li class="price" style="font-size: 18px">A perfect blend for the occasion</li>
+        </ul>
+        <%= image_tag 'other_solutions/wedding.png' %>
+        <br /><br /><br />
+        <a type="button" data-toggle="modal" data-target="#enquiryModal" class='button button-ps'>Enquire</a>
+      </div>
+      <div class="span4 price-column">
+        <h3  style="font-size: 24px">Other candy needs</h3>
+        <ul class="list">
+          <li class="price"  style="font-size: 18px">As simple as a candy jar!</li>
+        </ul>
+        <%= image_tag 'other_solutions/candy_jar.png' %>
+        <br /><br /><br /><br />
+        <a type="button" data-toggle="modal" data-target="#enquiryModal" class='button button-ps'>Enquire</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Subscription section end -->
+<%= render 'modals/enquiry' %>

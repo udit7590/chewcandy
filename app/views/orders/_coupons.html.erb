@@ -1,0 +1,13 @@
+<div class="row-fluid">
+  <div class="span5">
+    <p>Coupon and Promo Codes:</p>
+  </div>
+  <div class="span7">
+    <form action="<%= validate_coupon_orders_path %>" method="get" data-remote="true" data-type="script">
+      <input type="text" id="coupon_code" name="coupon_code" class='span8' placeholder='Coupon Code' value="<%= @cart.coupon_code %>" />
+      <br />
+      <input type="submit" value="Apply Coupon" class='button button-sp' />
+    </form>
+  </div>
+</div>
+<hr />

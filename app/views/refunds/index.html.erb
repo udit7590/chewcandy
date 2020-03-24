@@ -1,0 +1,59 @@
+<div class="admin-section" style="margin: auto; width: 1000px">
+
+  <%= render 'admin_shared/flash' %>
+
+  <%= render 'admin_shared/navigation' %>
+
+  <br />
+  <%= link_to 'Pending', filter_refunds_path(by: :active) %> &lt;&gt; 
+  <%= link_to 'Refunded', filter_refunds_path(by: :inactive) %> &lt;&gt; 
+  <%= link_to 'All', filter_refunds_path(by: :unscoped) %> &lt;&gt; 
+
+  <br /><br />
+  <% if @refunds.present? %>
+      <div>
+        <table border="1" style="border-collapse: collapse;">
+          <thead>
+            <tr>
+              <td>#</td>
+              <td>User</td>
+              <td>Placed on</td>
+              <td>Status</td>
+              <td>Refund For</td>
+              <td>Shipping Address</td>
+              <td>Billing Address</td>
+              <td>Amount</td>
+              <td>Actions</td>
+            </tr>
+          </thead>
+          <tbody>
+            <% @refunds.each do |refund| %>
+              <tr>
+                <td><%= refund.id %></td>
+                <td title="<%= refund.user.email %>"><%= refund.user.name %><span><%= '(Guest)' if refund.user.guest? %></span></td>
+                <td><%= refund.created_at.to_s(:long) %></td>
+                <td><%= refund.status %></td>
+                <td><%= refund.for_string %></td>
+                <td><%= refund.user.full_shipping_address %></td>
+                <td><%= refund.user.full_billing_address %></td>
+                <td><span class='text-unit'>INR </span><%= refund.amount %></td>
+                <td>
+                  <%= link_to 'View', refund_path(refund), class: 'action-link' %>
+                  <% unless refund.completed? %>
+                    <%= link_to 'Complete', complete_refund_path(refund), class: 'btn btn-danger action-link-del', method: :post, data: { confirm: 'Are you sure?' } %>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        
+
+      </div>
+      <br />
+      <%= paginate @refunds %>
+  <% end %>
+  <% unless @refunds.present? %>
+    <p style="color: red">No refunds present</p>
+  <% end %>
+</div>

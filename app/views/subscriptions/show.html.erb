@@ -1,0 +1,84 @@
+<div class="admin-section" style="margin: auto; width: 1000px">
+  <%= render 'admin_shared/flash' %>
+
+  <%= render 'admin_shared/navigation' %>
+  
+  <br /><br />
+  <% if @subscription.present? %>
+    <div>
+      <p><strong>ID:</strong> <%= @subscription.id %></p>
+      <p><strong>User:</strong> <%= @subscription.user.name %></p>
+      <p><strong>Collected Amount:</strong> INR <%= @subscription.collected_amount %> Of <%= @subscription.amount %></p>
+      <p><strong>Boxes Delivered:</strong> <%= @subscription.units_delivered %> Of <%= @subscription.plan.units %></p>
+      <p><strong>Placed On:</strong> <%= @subscription.created_at.to_s(:long) %></p>
+      
+      <h3>Subscription Status</h3>
+      <p style="color: orange"><%= @subscription.status %></p>
+
+      <h3>Subscription Monthly Process</h3>
+      <% unless @subscription.box_dispatched_for_current_month? %>
+        <%= link_to 'Dispatch Box', dispatch_box_subscriptions_path(subscription_id: @subscription.id), method: :post %>
+      <% end %>
+      <% if @subscription.active? %>
+        <%= link_to 'Cancel Subscription' %>
+      <% end %>
+
+      <h3>Subscription Details</h3>
+      <table border="1" style="border-collapse: collapse;">
+        <thead>
+          <tr>
+            <td>#</td>
+            <td>Boxes Delivered</td>
+            <td>Status</td>
+            <td>On</td>
+            <td>Amount Collected</td>
+            <td>Actions</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% @subscription.details.each_with_index do |detail, index| %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td><%= detail.units %></td>
+              <td><%= detail.status_string %></td>
+              <td><%= detail.status_date.to_s(:long) %></td>
+              <td>INR <%= detail.last_payment_received.to_s.presence || '0.0' %></td>
+              <td>
+                <% if detail.not_yet_delivered? %>
+                  <%= link_to 'Mark as Delivered', deliver_subscription_detail_path(detail), method: :patch %> |
+                <% end %>
+                <% if detail.payment_not_yet_received? %>
+                  <%= link_to 'Receive payment', receive_payment_subscription_detail_path(detail) %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      
+      <br />
+      <h3>User Shipping Address</h3>
+      <p><%= @subscription.user.full_shipping_address %></p>
+      <p><strong>Verified?: </strong><%= !!@subscription.user.shipping_address.try(:verified_at) %></p>
+      
+      <br />
+      <h3>User Billing Address</h3>
+      <p><%= @subscription.user.full_billing_address %></p>
+      <p><strong>Verified?: </strong><%= !!@subscription.user.billing_address.try(:verified_at) %></p>
+      
+      <br />
+      <% if @subscription.refund.present? %>
+        <h3>Refund Info</h3>
+        <p><strong>Amount:</strong> INR <%= @subscription.refund.amount %></p>
+        <p><strong>Placed On:</strong> <%= @subscription.refund.created_at.to_s(:long) %></p>
+        <p>Refund State: <span style="color: orange"><%= @subscription.refund.status %></span></p>
+      <% end %>
+
+      <br /><hr />
+      <%= link_to 'Back to subscriptions', subscriptions_path %>
+
+    </div>
+  <% end %>
+
+  
+</div>

@@ -1,0 +1,27 @@
+<% @title = 'ChewCandy- One stop solution for candies' %>
+<div style="margin: auto; width: 1000px">
+  <%= render 'admin_shared/flash' %>
+
+  <%= render 'admin_shared/navigation' %>
+
+  <br /><br />
+  <% @products.each do |product| %>
+    <div>
+      <%= product.name %> | INR <%= product.price %> | <%= product.stock %> gms available | <%= product.discount %> % discount
+      <br />
+      <% if product.image.present? %>
+        <%= image_tag product.image.url(:preview) %>
+      <% else %>
+        <p style="color: red">No image present</p>
+      <% end %>
+      <br /><br /><br />
+      <%= link_to 'View', product_path(product.id), class: 'action-link' %>
+      <%= link_to 'Edit', edit_product_path(product.id), class: 'action-link' %>
+      <%= link_to 'Destroy', product_path(product.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'action-link' %>
+      <br /><br /><br />
+    </div>
+  <% end %>
+  <% if @products.length < 1 %>
+    <p style="color: red">No products present</p>
+  <% end %>
+</div>

@@ -1,0 +1,84 @@
+<!-- Portfolio section start -->
+<div class="section secondary-section " id="candyProducts">
+  <!-- <div class="triangle"></div> -->
+  <div class="container">
+    <div class=" title">
+      <h1><%= I18n.t('pages.products.heading') %></h1>
+      <p><%= I18n.t('pages.products.sub_heading') %></p>
+      <p style="font-weight: bold;color: red"><%= I18n.t('pages.products.criteria_info') %></p>
+    </div>
+    <ul class="nav nav-pills">
+      <li class="filter" data-filter="all">
+        <a href="#noAction">All</a>
+      </li>
+      <% if @products.present? %>
+        <% @products.pluck(:category).uniq.each do |category| %>
+          <li class="filter" data-filter="<%= category %>">
+            <a href="#noAction"><%= category.humanize %></a>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+    <% if @products.present? %>
+      <% @products.each do |product| %>
+        <!-- Start details for product -->
+        <div id="single-project<%= product.id %>">
+          <div id="slidingDiv<%= product.id %>" class="toggleDiv row-fluid single-project product-listing" data-product-id="<%= product.id %>" data-min-quantity="<%= product.min_quantity %>" data-product-name="<%= product.name %>" data-product-url="<%= my_candy_path(candy_name: product.slug) %>">
+            <div class="span6 overlap-image-container">
+              <%= image_tag product.image.url(:preview), alt: product.name %>
+              <%= image_tag ProductsHelper::FOOD_TYPE_IMAGE_PATHS[product.food_type.to_sym], class: 'over-image' %>
+            </div>
+            <div class="span6">
+              <div class="project-description">
+                <div class="project-title clearfix">
+                  <h3><%= product.name %></h3>
+                  <span class="show_hide close">
+                    <i class="icon-cancel"></i>
+                  </span>
+                </div>
+                <div class="project-info">
+                  <div><span>Price</span>INR <%= product.price %> <em style="font-size: 12px;">per <%= product.min_quantity %> <%= product.min_quantity_unit.pluralize %></em></div>
+                  <div><span>Type</span><%= product.food_type.humanize %></div>
+                  <div><span>Ingredients</span><%= product.ingredients.to_s %></div>
+                  <div><span>Category</span><%= product.category %></div>
+                </div>
+                <p> <%= product.description %> </p>
+                <input class="span4 add-quantity full-width" type="number" name="product[quantity]" step="10" min="<%= "#{ product.min_quantity }" %>" placeholder='<%= "Quantity ( Min: #{ product.min_quantity } #{ product.min_quantity_unit.pluralize } ) " %>'  />
+                 <span class="text-error hidden-with-space small-font-size">Please select minimum quantity of <%= product.min_quantity %> <%= product.min_quantity_unit.pluralize %> and in multiples of 10</span>
+                <button class="button button-bl btn-block add-to-cart" data-target="addToCart">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!-- End details for product -->
+      <% end %>
+    <% end %>
+    <ul id="portfolio-grid" class="thumbnails row">
+      <% if @products.present? %>
+        <% @products.each do |product| %>
+          <li class="span4 mix tour-candies <%= product.category %> product-listing" data-product-id="<%= product.id %>" data-min-quantity="<%= product.min_quantity %>">
+            <div class="thumbnail overlap-image-container">
+              <%= image_tag product.image.url(:thumbnail), class: 'product-image-thumb' %>
+              <%= image_tag ProductsHelper::FOOD_TYPE_IMAGE_PATHS[product.food_type.to_sym], class: 'over-image' %>
+
+              
+              <a href="<%= my_candy_path(candy_name: product.slug) %>" class="more show_hide" rel="#slidingDiv<%= product.id %>">
+                <i class="icon-plus"></i>
+              </a>
+              <h3><%= product.name %></h3>
+              <p>
+                INR <%= product.price %> <br />
+                <input class="span2 add-quantity tour-candies-add-quantity almost-full-width" type="number" name="product[quantity]" step="10" min="<%= "#{ product.min_quantity }" %>" placeholder='<%= "Quantity ( Min: #{ product.min_quantity } #{ product.min_quantity_unit.pluralize } ) " %>'  />
+                <span class="text-error hidden-with-space small-font-size">Please select minimum quantity of <%= product.min_quantity %> <%= product.min_quantity_unit.pluralize %> and in multiples of 10</span>
+              </p>
+              <div class="mask"></div>
+            </div>
+            <button class="button button-bl btn-block add-to-cart" data-target="addToCart">Add to cart</button>
+          </li>
+        <% end %>
+      <% end %> 
+    </ul>
+  </div>
+</div>
+
+<!-- Portfolio section end -->

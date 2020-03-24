@@ -1,0 +1,26 @@
+<section id="footer_top_area">
+  <div class="clearfix wrapper footer_top">
+    <div class="clearfix footer_top_container">
+      <div class="clearfix single_footer_top floatleft">
+        <h2>Our Concept</h2>
+        <p><%= I18n.t('site.concept') %></p>
+      </div>
+      <div class="clearfix single_footer_top floatleft">
+        <h2>Our Features &amp; Services</h2>
+        <ul>
+          <li><a href="<%= root_path + '#candyProducts' %>">Deliver customized quantity candies</a></li>
+          <li><a href="<%= root_path + '#candyProducts' %>">Take bulk order of candies</a></li>
+          <li><a href="<%= root_path + '#candyProducts' %>">Gifting Ideas related to candies</a></li>
+        </ul>
+      </div>
+      <div class="clearfix single_footer_top floatleft">
+        <h2>Recent Posts</h2>
+        <ul>
+          <% recent_posts.each do |recent_post| %>
+            <li title="<%= recent_post.title.humanize %>"><a href="<%= blog_post_path(recent_post) %>"><%= recent_post.title.humanize.truncate(95) %></a></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

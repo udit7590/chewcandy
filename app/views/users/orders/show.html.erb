@@ -1,0 +1,77 @@
+<!-- Start user orders section -->
+<div class="section secondary-section" id="myOrders">
+  <div class="section third-section" id="checkoutForm" style="min-height: 530px;">
+    <div class="container newsletter">
+      <div class="sub-section">
+        <div class="title clearfix">
+          <div class="pull-left">
+            <h3>Your order details</h3>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <span class="special-text">Your order ID: <strong class="normal-text"><%= @order.identifier %></strong></span>
+        <span class="special-text" style="margin-left: 350px;">Order State: <strong class="normal-text"><%= @order.state.humanize %></strong></span>
+        <span class="special-text pull-right">Placed On: <strong class="normal-text"><%= @order.created_at.to_s(:long) %></strong></span>
+      </div>
+      <br />
+
+      <% if @order.shopping_cart.blank? %>
+        <h3>This order details has been removed from our system. Sorry for the inconvinience caused</h3>
+      <% else %>
+        <table class="table-info">
+          <thead>
+            <tr>
+              <th>Candy Name</th>
+              <th>Total Quantity</th>
+              <th>Amount (Per 10 Gram)</th>
+              <th>Total Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @order.shopping_cart.shopping_cart_items.each do |shopping_cart_item| %>
+              <tr>
+                <td><%= shopping_cart_item.product.name.humanize %></td>
+                <td><%= shopping_cart_item.quantity.to_s %><em> Grams</em></td>
+                <td><em>INR </em><%= shopping_cart_item.product.price.to_s %></td>
+                <td><em>INR </em><%= shopping_cart_item.amount.to_s %></td>
+              </tr>
+            <% end %>
+            <tr class="special-text-blue table-row-seperator">
+              <td></td>
+              <td></td>
+              <td>VAT (@12.5%)</td>
+              <td><em>INR </em><%= @order.total_tax_amount.to_s %></td>
+            </tr>
+            <tr class="special-text-blue">
+              <td></td>
+              <td></td>
+              <td>Shipping Cost</td>
+              <td><em>INR </em><%= @order.total_shipping_amount.to_s %></td>
+            </tr>
+            <tr class="special-text">
+              <td></td>
+              <td></td>
+              <td>Grand Total</td>
+              <td><em>INR </em><%= @order.total_price_including_taxes_and_shipping.to_s %></td>
+            </tr>
+          </tbody>
+        </table>
+      <% end %>
+
+      <br />
+      <div>
+        <% link_to 'Back To My Orders', users_orders_path, class: 'btn btn-primary span3' %>
+        <% if @order.state.to_sym == :placed %>
+          <%= link_to 'Cancel My Order', cancel_users_order_path(@order), class: 'btn btn-warning span3 pull-right', method: :patch, data: { confirm: 'Are you sure you want to cancel your order?' } %>
+        <% elsif [:delievered, :payment_received].include?(@order.state.to_sym) %>
+          <%= render partial: 'modals/refund', locals: { order: @order } %>
+          <a type="button" data-toggle="modal" data-target="#refundModal" class='btn btn-danger span3 pull-right'>Return My Order</a>
+          <% link_to 'Return My Order', users_order_path(@order), class: 'btn btn-danger span3 pull-right', confirm: 'Are you sure?' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End user orders section -->

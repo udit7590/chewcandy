@@ -1,0 +1,66 @@
+
+<%= form_for @criterium do |f| %>
+  <fieldset>
+
+    <%= render 'errors' %>
+
+    <div class="control-group">
+      <%= f.label :name, class: 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :name, class: 'input-xlarge', placeholder: 'Unique Criterium Name*', size: 46, required: true %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :one_time, class: 'control-label' %>
+      <div class="controls">
+        <%= f.check_box :one_time, class: 'input-xlarge', size: 46 %>
+        <span>Check if discount coupon is to be used only once</span>
+      </div>
+    </div>
+    
+    <div class="control-group">
+      <%= f.label :valid_from, class: 'control-label' %>
+      <div class="controls">
+        <%= f.datetime_field :valid_from, class: 'input-xlarge', placeholder: 'Valid From*', size: 46, required: true %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :valid_till, class: 'control-label' %>
+      <div class="controls">
+        <%= f.datetime_field :valid_till, class: 'input-xlarge', placeholder: 'Valid Till*', size: 46, required: true %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :actable_type, 'Type Of Criterium', class: 'control-label' %>
+      <div class="controls">
+        <%= f.select :actable_type, Criterium::TYPES.map { |type| [type.to_s.underscore.humanize, type.name] }, { include_blank: false } %>
+        <p> </p>
+      </div>
+    </div>
+
+    <% if action_name.to_s == 'edit' %>
+      <% if @criterium.actable_type == 'FestivalCriterium' %>
+        <%= render partial: 'festival_criterium_form', locals: { f: f } %>
+      <% elsif @criterium.actable_type == 'MinOrderCriterium' %>
+        <%= render partial: 'min_order_criterium_form', locals: { f: f } %>
+      <% elsif @criterium.actable_type == 'PreviousOrderCriterium' %>
+        <%= render partial: 'prev_order_criterium_form', locals: { f: f } %>
+      <% end %>
+
+    <% end %>
+
+    <br /><br />
+    <div class="control-group">
+      <div class="controls">
+        <%= f.submit 'Save', class: 'btn btn-large btn-inverse' %>
+      </div>
+    </div>
+    <br />
+
+    <%= link_to 'New Discount', new_discount_path, class: 'back-link' %>
+    <%= link_to 'Back to Criteria', criteria_path, class: 'back-link' %>
+  </fieldset>
+<% end %>

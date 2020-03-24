@@ -1,0 +1,35 @@
+
+<!-- Order Form start -->
+<div class="section third-section" id="checkoutForm">
+  <%= render 'shared_user_form/error' %>
+  <div class="container newsletter">
+    <div class="sub-section">
+      <div class="title clearfix">
+        <div class="pull-left">
+          <h3>Please provide following details to complete the process</h3>
+        </div>
+      </div>
+    </div>
+    <div id="success-subscribe" class="alert alert-success invisible">
+      <strong>Congratulations!</strong>Your order has been successfully placed.
+    </div>
+    <!-- ************************************************************************************************ -->
+    <%= render partial: 'orders/coupons' %>
+
+    <%= form_for(@user, url: place_orders_path, method: :post) do |f| %>
+      <%= render partial: 'shared_user_form/user_form', locals: { f: f } %>
+      <div class="row-fluid">
+        <div class="span5">
+          <p>Your Order Details</p>
+        </div>
+        <div class="span7">
+          <%= f.hidden_field :shopping_cart_id, value: @cart.id %>
+          <%= render 'orders/details' %>
+        </div>
+      </div>
+      <%= f.submit 'Confirm and place my order', class: 'button button-sp btn-block' %>
+    <% end %>
+    <!-- ************************************************************************************************ -->
+  </div>
+</div>
+<!-- Order Form end -->

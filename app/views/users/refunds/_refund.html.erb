@@ -1,0 +1,16 @@
+<tr>
+  <td><%= refund.id %></td>
+  <td><%= refund.created_at.to_s(:long) %></td>
+  <td class="special-text-blue"><%= refund.complete? ? 'Completed' : 'Pending' %></td>
+  <td><span class='text-unit'>INR </span><%= refund.amount %></td>
+  <td>
+    <u>
+      <!-- TODO_UDIT: ENABLE WHEN SUBSCRIPTIONS ARE ON -->
+      <%# if refund.subscription.present? %>
+        <%# link_to refund.subscription.id, users_subscription_path(refund.subscription) %>
+      <%# else %>
+        <%= link_to refund.order_id, users_order_path(refund.order) %>
+      <%# end %>
+    </u>
+  </td>
+</tr>

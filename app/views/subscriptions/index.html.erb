@@ -1,0 +1,62 @@
+<div class="admin-section" style="margin: auto; width: 1000px">
+
+  <%= render 'admin_shared/flash' %>
+
+  <%= render 'admin_shared/navigation' %>
+
+  <br />
+  <%= link_to 'Current Month Deliveries', filter_subscriptions_path(by: :current_month_deliveries) %> &lt;&gt; 
+  <%= link_to 'Pending Payments', filter_subscriptions_path(by: :pending_payments) %> &lt;&gt; 
+  <%= link_to 'Pending Deliveries', filter_subscriptions_path(by: :pending_deliveries) %> &lt;&gt; 
+  <%= link_to 'Active', filter_subscriptions_path(by: :active) %> &lt;&gt; 
+  <%= link_to 'Cancelled', filter_subscriptions_path(by: :cancelled_ones) %> &lt;&gt; 
+  <%= link_to 'Completed', filter_subscriptions_path(by: :completed_ones) %> &lt;&gt; 
+
+  <br /><br />
+  <% if @subscriptions.present? %>
+      <div>
+        <table border="1" style="border-collapse: collapse;">
+          <thead>
+            <tr>
+              <td>#</td>
+              <td>User</td>
+              <td>Placed on</td>
+              <td>Status</td>
+              <td>Shipping Address</td>
+              <td>Billing Address</td>
+              <td>Collected Amount</td>
+              <td>Boxes Left</td>
+              <td>Last Delivery Date</td>
+              <td>Next Estimated Delivery</td>
+              <td>Actions</td>
+            </tr>
+          </thead>
+          <tbody>
+            <% @subscriptions.each do |subscription| %>
+              <% next_date = subscription.details.maximum(:last_delivered_at) %>
+              <tr>
+                <td><%= subscription.id %></td>
+                <td title="<%= subscription.user.email %>"><%= subscription.user.name %><span><%= '(Guest)' if subscription.user.guest? %></span></td>
+                <td><%= subscription.created_at.to_s(:long) %></td>
+                <td><%= subscription.status %></td>
+                <td><%= subscription.user.full_shipping_address %></td>
+                <td><%= subscription.user.full_billing_address %></td>
+                <td><span class='text-unit'>INR </span><%= subscription.collected_amount %> Of <%= subscription.amount %></td>
+                <td><%= subscription.remaining_units_to_be_delivered %></td>
+                <td><%= next_date ? next_date.to_s(:long) : 'No box delivered yet' %></td>
+                <td><%= next_date.present? ? subscription.details.maximum(:last_delivered_at).at_beginning_of_month.next_month.to_s(:long) : DateTime.now.to_s(:long) %></td>
+                <td>
+                  <%= link_to 'View', subscription_path(subscription.id) %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+      </div>
+      <br />
+      <%= paginate @subscriptions %>
+  <% else %>
+    <p style="color: red">No subscriptions present</p>
+  <% end %>
+</div>

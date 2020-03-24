@@ -1,0 +1,9 @@
+<%= f.text_area :full_address, class: 'span8', placeholder: 'Full Address *', required: true, rows: '5' %>
+<br />
+<%= f.text_field :city, class: 'span4', placeholder: 'City *', required: true %>
+&nbsp;&nbsp;
+<%= f.text_field :pincode, class: 'span4', placeholder: 'Pincode *', required: true, data: { pattern: 'number' } %>
+<br />
+<%= f.select :state, Address::SHIPMENT_STATES.invert.to_a, {}, class: 'span4 address-select' %>
+&nbsp;&nbsp;&nbsp;
+<%= f.select :country, [['India', 'india']], {}, class: 'span4 address-select' %>

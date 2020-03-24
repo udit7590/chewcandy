@@ -1,0 +1,16 @@
+en:
+  pages:
+    contact_us:
+      sub_heading: "Send us your queries, feedbacks or concerns and we'll be happy to revert."
+    products:
+      heading: "Having a sweet craving? We'll make you spend all your savings. Go candid for one of your candies below"
+      sub_heading: "We ensure ordering from us is like 'Taking a candy from a baby'"
+      criteria_info: "You need to buy minimum candy of worth INR 150 to order"
+    other_solutions:
+      heading: "Other solutions provided by us"
+      sub_heading: "Have a birthday party and want to gift candies? Getting married and want a candy buffet? Or need your cookie jars filled? We have the solutions for you. Directly contact us for all these related needs."
+      contact_heading: 'We offer custom plans and gifting solutions. Contact us for more info.'
+    subscriptions:
+      heading: 'Monthly Candy Box Subscriptions'
+      sub_heading: 'You can choose from subscription based plans where we deliver you monthly boxes of candies handpicked by us from different varieties.'
+      contact_heading: 'We offer custom plans and gifting solutions. Contact us for more info.'

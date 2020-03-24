@@ -1,0 +1,43 @@
+<div class="admin-section" style="margin: auto; width: 1000px">
+  <%= render 'admin_shared/flash' %>
+
+  <%= render 'admin_shared/navigation' %>
+  
+  <br /><br />
+  <% if @refund %>
+    <div>
+      <p><strong>User:</strong> <%= @refund.user.name %></p>
+      <p><strong>Amount:</strong> INR <%= @refund.amount %></p>
+      <p><strong>Placed On:</strong> <%= @refund.created_at.to_s(:long) %></p>
+      
+      <h3>Refund State</h3>
+      <p style="color: orange"><%= @refund.status %></p>
+
+      <% if @refund.subscription.present? %>
+        <h3>Subscription Details for which refund demanded</h3>
+        <p><strong>ID:</strong> <%= link_to @refund.subscription.id, subscription_path(@refund.subscription.id) %></p>
+      <% else %>
+        <h3>Order Details for which refund demanded</h3>
+        <p><strong>ID:</strong> <%= link_to @refund.order.identifier, order_path(@refund.order) %></p>
+      <% end %>
+
+      
+      <br />
+      <h3>User Shipping Address</h3>
+      <p><%= @refund.user.full_shipping_address %></p>
+      <p><strong>Verified?: </strong><%= !!@refund.user.shipping_address.try(:verified_at) %></p>
+      
+      <br />
+      <h3>User Billing Address</h3>
+      <p><%= @refund.user.full_billing_address %></p>
+      <p><strong>Verified?: </strong><%= !!@refund.user.billing_address.try(:verified_at) %></p>
+      
+      <br /><hr />
+      <%= link_to 'Back to refunds', refunds_path, class: 'back-link' %>
+      <% unless @refund.complete? %>
+        <%= link_to 'Complete', complete_refund_path(@refund), method: :post, data: { confirm: 'Are you sure?' }, class: 'action-link-del' %>
+      <% end %>
+
+    </div>
+  <% end %>
+</div>

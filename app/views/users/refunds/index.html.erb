@@ -1,0 +1,46 @@
+<!-- Start user orders section -->
+<div class="section secondary-section" id="myOrders">
+  <div class="section third-section" id="checkoutForm" style="min-height: 530px;">
+    <div class="container newsletter">
+      <% if @refunds.present? %>
+        <div class="sub-section">
+          <div class="title clearfix">
+            <div class="pull-left">
+              <h3>Following is the list of your refunds</h3>
+            </div>
+          </div>
+        </div>
+        <table class="table-info">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Created On</th>
+              <th>Status</th>
+              <th>Amount</th>
+              <th>Subscription/Order ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render partial: 'header_row', locals: { refunds: @refunds, type: 'Active' } %>
+            <% @refunds.each do |refund| %>
+              <%= render partial: 'refund', locals: { refund: refund } %>
+            <% end %>
+            <%= render partial: 'header_row', locals: { refunds: @inactive_refunds, type: 'Succesful' } %>
+            <% @inactive_refunds.each do |refund| %>
+              <%= render partial: 'refund', locals: { refund: refund } %>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <div class="sub-section">
+          <div class="title clearfix">
+            <div class="pull-left">
+              <h3 class='text-error'>There are no refunds pending or completed associated with your account</h3>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<!-- End user orders section -->

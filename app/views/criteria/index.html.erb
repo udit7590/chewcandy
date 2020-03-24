@@ -1,0 +1,25 @@
+<div style="margin: auto; width: 1000px">
+  <%= render 'admin_shared/flash' %>
+
+  <%= render 'admin_shared/navigation' %>
+
+  <br /><br />
+  <%= link_to 'New Discount', new_discount_path, class: 'sub-nav-link' %>
+  <%= link_to 'New Criterium', new_criterium_path, class: 'sub-nav-link' %>
+  <hr class="horizontal-line" />
+  
+  <br /><br />
+  <% @criteria.each do |criterium| %>
+    <div>
+      <%= criterium.id %> | <%= criterium.name %> | <%= criterium.valid_from.to_s(:short) %> till <%= criterium.valid_till.to_s(:short) %>
+      <br /><br /><br />
+      <%= link_to 'View', criterium_path(criterium.id), class: 'action-link' %>
+      <%= link_to 'Edit', edit_criterium_path(criterium.id), class: 'action-link' %>
+      <%= link_to 'Destroy', criterium_path(criterium.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'action-link-del' %>
+      <br /><br />
+    </div>
+  <% end %>
+  <% if @criteria.length < 1 %>
+    <p style="color: red">No criterias present</p>
+  <% end %>
+</div>

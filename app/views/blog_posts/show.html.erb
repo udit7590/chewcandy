@@ -1,0 +1,110 @@
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= @blog_post.meta_description %>" />
+  <meta property="og:title" content="<%= @blog_post.title %>" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="<%= blog_post_url(@blog_post) %>" />
+  <meta property="og:image" content="<%= @blog_post.image.url(:large) %>" />
+  <meta property="og:description" content="<%= @blog_post.meta_description %>" />
+  <meta property="og:site_name" content="ChewCandy" />
+  <meta property="fb:app_id" content="1143560065654157" />
+<% end %>
+
+<div class="clearfix main_content floatleft">
+
+  <div class="clearfix content">
+    <div class="content_title">
+      <h2 title="<%= @blog_post.title.humanize %>"><%= @blog_post.title.truncate(90) %></h2>
+      <% if @user.admin? %>
+        <%= link_to 'Edit', edit_blog_post_path(@blog_post), class: 'edit-post-link' %>
+      <% end %>
+    </div>
+    <div class="single_work_page clearfix">
+      <div class="work_single_page_feature">
+        <img src="<%= @blog_post.image.url(:large) %>" alt="<%= @blog_post.title %>" /> <br />
+      </div>
+      <div class="work_meta clearfix">
+        <p class="floatleft">
+          Created : <span> <span><i class="fa fa-clock-o"></i> <%= @blog_post.created_at.to_date.to_s(:long) %></span></span>
+          Tags: &nbsp;&nbsp;&nbsp;<span>
+            <% @blog_post.tag_list.each do |tag| %>
+              <a href="<%= tagged_blog_posts_path(tag) %>"><span><i class="fa fa-folder"></i> <%= tag.humanize %></span></a>
+            <% end %>
+          </span>
+        </p>
+      </div>
+      <div class="single_work_page_content">
+        <%= @blog_post.html_content.html_safe %>
+      </div>
+    </div>
+    <!-- <div class="more_post_container">
+      <h2>You may Also like:</h2>
+      <div class="more_post">
+        <a href="">Lorem Ipsum is simply dummy text of the printing</a>
+        <a href="">Lorem Ipsum is simply dummy text of the printing</a>
+        <a href="">Lorem Ipsum is simply dummy text of the printing</a>
+      </div>
+    </div>  
+
+    <div class="advertisement_container">
+      <div class="advertisement">
+
+      </div>
+    </div> -->
+  
+  </div>
+
+  <div class="more_themes">
+    <h2>Comment(s) <i class="fa"></i></h2>
+    <% if @comments.present? %>
+
+      <% @comments.select { |comment| comment.parent_id.nil? }.each do |comment| %>
+        <div class="more_post">
+          <div class="main-comment-container">
+            <h4><%= image_tag 'comment/main_comment.png', size: '62x62', style: 'float: left; margin-right: 5%' %><%= comment.body %></h4>
+              <div class="comment-info-container">
+              <%# link_to 'Reply', blog_post_comment_reply_path(@blog_post, comment), method: :post, class: 'reply-comment-link' %>
+
+                <span><span class="comment-info-head-highlight">By: </span><%= comment.user.guest? ? comment.full_name : comment.user.name %></span>
+                <span><span class="comment-info-head-highlight">On: </span><%= comment.created_at.to_s(:short) %></span>
+              </div>
+            <hr class="gray-horizontal-thick" />
+            <% if comment.has_children? %>
+              <% comment.children.limit(100).order(created_at: :asc).each do |child_comment| %>
+                <div class="child-comment-container">
+                  <h4><%= image_tag 'comment/comment_thread.png', size: '24x24', style: 'float: left; margin-right: 5%' %><%= child_comment.body %></h4>
+                  <div class="comment-info-container">
+                    <span><span class="comment-info-head-highlight">By: </span><%= child_comment.user.guest? ? child_comment.full_name : child_comment.user.name %></span>
+                    <span><span class="comment-info-head-highlight">On: </span><%= child_comment.created_at.to_s(:short) %></span>
+                  </div>
+                  <hr class="gray-horizontal-thin" />
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      <br />
+      <% end %>
+
+    <% end %>
+
+    <%= render 'blog_posts/comment_form' %>
+  </div>
+
+  
+  <% if @related_posts.present? %>
+    <div class="more_themes">
+      <h2>Related Post(s) <i class="fa fa-thumbs-o-up"></i></h2>
+      <div class="related_posts_container">
+        <% @related_posts.each do |related_post| %>
+          <a href="<%= blog_post_path(related_post) %>">
+            <div class="single_more_themes floatleft" title="<%= related_post.title.humanize %>">
+              <img src="<%= related_post.image.url(:preview) %>" alt="<%= related_post.title %>"/>
+              <h4><%= related_post.title.humanize.truncate(35) %></h4>
+            </div>
+          </a>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
+</div>

@@ -1,0 +1,23 @@
+<!-- Start user orders section -->
+<div class="section secondary-section" id="myOrders">
+  <div class="section third-section" id="checkoutForm" style="min-height: 530px;">
+    <div class="container">
+      <h2>Forgot your password?</h2>
+      <hr />
+        <div class="special-dark-form-element-container">
+          <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+            <%= devise_error_messages! %>
+
+              <%= f.email_field :email, autofocus: true, placeholder: 'Your Email *', class: 'span4 special-dark-form-element special-dark-form-block-element' %>
+
+            <div class="actions">
+              <%= f.submit "Send me reset password instructions", class: 'button button-sp btn-block ' %>
+            </div>
+          <% end %>
+          <%= render "users/shared/links" %>
+        </div>
+
+    </div>
+  </div>
+</div>
+<!-- End user orders section -->

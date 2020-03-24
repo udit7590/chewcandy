@@ -1,0 +1,56 @@
+<!-- Start user orders section -->
+<div class="section secondary-section" id="myOrders">
+  <div class="section third-section" id="checkoutForm" style="min-height: 530px;">
+    <div class="container newsletter">
+      <% if @user.orders.present? %>
+        <div class="sub-section">
+          <div class="title clearfix">
+            <div class="pull-left">
+              <h3>Following is the list of your orders available with us</h3>
+            </div>
+          </div>
+        </div>
+        <table class="table-info">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Placed On</th>
+              <th>Status</th>
+              <th>Total Quantity</th>
+              <th>Total Amount</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render partial: 'header_row', locals: { orders: @orders, type: 'Pending' } %>
+            <% @orders.each do |order| %>
+              <%= render partial: 'order', locals: { order: order } %>
+            <% end %>
+            <%= render partial: 'header_row', locals: { orders: @dispatched_orders, type: 'Dispatched' } %>
+            <% @dispatched_orders.each do |order| %>
+              <%= render partial: 'order', locals: { order: order } %>
+            <% end %>
+            <%= render partial: 'header_row', locals: { orders: @past_orders, type: 'Past' } %>
+            <% @past_orders.each do |order| %>
+              <%= render partial: 'order', locals: { order: order } %>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <div class="sub-section">
+          <div class="title clearfix">
+            <div class="pull-left">
+              <h3 class='text-error'>You have not placed any orders with us. We have wide range of candies available with us. Grab some of them now. You can also opt for monthly packages delievered right at your place. Be Candilicious! :)</h3>
+            </div>
+          </div>
+        </div>
+        <div class='center-image'>
+          <%= image_tag 'grab_candy.png' %>
+          <br /><br />
+          <%= link_to 'Buy Candies', root_path + '#candyProducts', class: 'button btn-block button-sp' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<!-- End user orders section -->

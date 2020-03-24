@@ -1,0 +1,9 @@
+alert("Invalid Coupon. <%= @coupon.errors.join(', ') %>");
+
+var $table = $('.checkout-order-details'),
+    $orderTotalRow = $table.find('[data-row=total]'),
+    $discountTableRow = $table.find('[data-row=discount]');
+
+$discountTableRow.remove();
+
+$orderTotalRow.find('[data-column="amount"]').html("<%= @cart.display_payable_amount %>")

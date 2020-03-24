@@ -1,0 +1,13 @@
+alert('Coupon applied!');
+var $table = $('.checkout-order-details'),
+    $orderTotalRow = $table.find('[data-row=total]'),
+    $discountTableRow = $table.find('[data-row=discount]'),
+    newHtml = "<td></td><td></td><td>Discount</td><td>INR <%= @coupon.discount_amount %></td>";
+
+if ($discountTableRow.length < 1) {
+  $discountTableRow = $('<tr>').attr('data-row', "discount");
+  $discountTableRow.insertBefore($orderTotalRow);
+}
+
+$discountTableRow.html(newHtml);
+$orderTotalRow.find('[data-column="amount"]').html("<%= @cart.display_payable_amount %>");

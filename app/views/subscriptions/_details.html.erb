@@ -1,0 +1,34 @@
+
+  <table class="pull-right span8 checkout-order-details">
+    <thead>
+      <tr>
+        <th>Plan Type</th>
+        <th>No Of Boxes</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><%= @plan.type.humanize %></td>
+          <td><%= @plan.units %></td>
+          <td>INR <%= @plan.price * @plan.units %></td>
+        </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td></td>
+        <td>VAT Charges(@12.5%)</td>
+        <td>INR <%= @plan.price * @plan.units * Constants::VAT_RATE %></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Shipping Charges</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Total<span style="font-size: 12px"> <br />(To be paid on first visit)</span></td>
+        <td>INR <%= @plan.amount_including_taxes %></td>
+      </tr>
+    </tfoot>
+  </table>

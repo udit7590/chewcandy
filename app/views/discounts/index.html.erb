@@ -1,0 +1,25 @@
+<div style="margin: auto; width: 1000px">
+  <%= render 'admin_shared/flash' %>
+
+  <%= render 'admin_shared/navigation' %>
+
+  <br /><br />
+  <%= link_to 'New Discount', new_discount_path, class: 'sub-nav-link' %> | 
+  <%= link_to 'New Criteria', new_criterium_path, class: 'sub-nav-link' %> | 
+  <%= link_to 'All Criterias', criteria_path, class: 'sub-nav-link' %> | 
+  
+  <br /><br />
+  <% @discounts.each do |discount| %>
+    <div>
+      <%= discount.id %> | <%= discount.amount %> <%= discount.unit %> | MAX:  INR <%= discount.max_amount %>
+      <br /><br /><br />
+      <%= link_to 'View', discount_path(discount.id), class: 'action-link' %>
+      <%= link_to 'Edit', edit_discount_path(discount.id), class: 'action-link' %>
+      <%= link_to 'Destroy', discount_path(discount.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'action-link' %>
+      <br /><br /><br />
+    </div>
+  <% end %>
+  <% if @discounts.length < 1 %>
+    <p style="color: red">No discounts present</p>
+  <% end %>
+</div>

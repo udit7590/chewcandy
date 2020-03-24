@@ -1,0 +1,9 @@
+<p><%= @user.name %> has cancelled his/her subscription.</p>
+<p>
+  <%= link_to 'Click here to look at the subscription', subscription_url(@subscription.id) %>
+</p>
+<% if @subscription.refund.present? %>
+  <p>
+    Reason Given: <%= @subscription.refund.comments %>
+  </p>
+<% end %>

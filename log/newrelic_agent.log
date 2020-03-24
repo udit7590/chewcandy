@@ -1,0 +1,440 @@
+# Logfile created on 2015-07-07 23:56:22 +0530 by logger.rb/47272
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Starting the New Relic agent in "production" environment.
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Environment: production
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : No known dispatcher detected.
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Application: chewcandy
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Installing ActiveRecord 4 instrumentation
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Installing Net instrumentation
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Installing deferred Rack instrumentation
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Installing Rack::Builder middleware instrumentation
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Installing Rails 3+ middleware instrumentation
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Installing Rails 4 Controller instrumentation
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Installing Rails 4 view instrumentation
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Installing Rails 4 Error instrumentation
+[07/07/15 23:56:22 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Finished instrumentation
+[07/07/15 23:56:26 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Starting the New Relic agent in "production" environment.
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Environment: production
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : No known dispatcher detected.
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Application: chewcandy
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Installing ActiveRecord 4 instrumentation
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Installing Net instrumentation
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Installing deferred Rack instrumentation
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Installing Rack::Builder middleware instrumentation
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Installing Rails 3+ middleware instrumentation
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Installing Rails 4 Controller instrumentation
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Installing Rails 4 view instrumentation
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Installing Rails 4 Error instrumentation
+[07/07/15 23:57:05 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Finished instrumentation
+[07/07/15 23:57:09 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/07/15 23:57:11 +0530 vinmac33s-MacBook-Pro.local (80958)] INFO : Starting Agent shutdown
+[07/07/15 23:57:17 +0530 vinmac33s-MacBook-Pro.local (80953)] INFO : Starting Agent shutdown
+[07/07/15 23:57:17 +0530 vinmac33s-MacBook-Pro.local (80943)] INFO : Starting Agent shutdown
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Starting the New Relic agent in "production" environment.
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Environment: production
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : No known dispatcher detected.
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Application: chewcandy
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Installing ActiveRecord 4 instrumentation
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Installing Net instrumentation
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Installing deferred Rack instrumentation
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Installing Rack::Builder middleware instrumentation
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Installing Rails 3+ middleware instrumentation
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Installing Rails 4 Controller instrumentation
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Installing Rails 4 view instrumentation
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Installing Rails 4 Error instrumentation
+[07/07/15 23:57:20 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Finished instrumentation
+[07/07/15 23:57:27 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 00:01:10 +0530 vinmac33s-MacBook-Pro.local (80973)] INFO : Starting Agent shutdown
+[07/08/15 00:01:21 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:01:21 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:01:21 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:01:21 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Environment: production
+[07/08/15 00:01:21 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : No known dispatcher detected.
+[07/08/15 00:01:21 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Application: chewcandy
+[07/08/15 00:01:21 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:01:22 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:01:22 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:01:22 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Installing Net instrumentation
+[07/08/15 00:01:22 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:01:22 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:01:22 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:01:22 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:01:22 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:01:22 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:01:22 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Finished instrumentation
+[07/08/15 00:01:25 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 00:01:26 +0530 vinmac33s-MacBook-Pro.local (81082)] INFO : Starting Agent shutdown
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : Environment: production
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : No known dispatcher detected.
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : Application: chewcandy
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : Installing Net instrumentation
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:01:36 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : Finished instrumentation
+[07/08/15 00:01:39 +0530 vinmac33s-MacBook-Pro.local (81094)] INFO : Starting Agent shutdown
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Environment: production
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : No known dispatcher detected.
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Application: chewcandy
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Installing Net instrumentation
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:01:45 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Finished instrumentation
+[07/08/15 00:01:49 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 00:02:31 +0530 vinmac33s-MacBook-Pro.local (81107)] INFO : Starting Agent shutdown
+[07/08/15 00:09:09 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:09:09 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:09:09 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:09:09 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : Environment: production
+[07/08/15 00:09:09 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : No known dispatcher detected.
+[07/08/15 00:09:09 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : Application: chewcandy
+[07/08/15 00:09:09 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:09:10 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:09:10 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:09:10 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : Installing Net instrumentation
+[07/08/15 00:09:10 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:09:10 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:09:10 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:09:10 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:09:10 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:09:10 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:09:10 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : Finished instrumentation
+[07/08/15 00:09:33 +0530 vinmac33s-MacBook-Pro.local (81305)] INFO : Starting Agent shutdown
+[07/08/15 00:09:44 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:09:44 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:09:44 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:09:44 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Environment: production
+[07/08/15 00:09:44 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : No known dispatcher detected.
+[07/08/15 00:09:44 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Application: chewcandy
+[07/08/15 00:09:44 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:09:45 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:09:45 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:09:45 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Installing Net instrumentation
+[07/08/15 00:09:45 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:09:45 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:09:45 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:09:45 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:09:45 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:09:45 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:09:45 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Finished instrumentation
+[07/08/15 00:09:48 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 00:11:09 +0530 vinmac33s-MacBook-Pro.local (81323)] INFO : Starting Agent shutdown
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Environment: production
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : No known dispatcher detected.
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Application: chewcandy
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Installing Net instrumentation
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:11:20 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Finished instrumentation
+[07/08/15 00:11:25 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 00:15:56 +0530 vinmac33s-MacBook-Pro.local (81375)] INFO : Starting Agent shutdown
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Environment: production
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : No known dispatcher detected.
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Application: chewcandy
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Installing Net instrumentation
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:16:08 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Finished instrumentation
+[07/08/15 00:16:14 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 00:20:47 +0530 vinmac33s-MacBook-Pro.local (81520)] INFO : Starting Agent shutdown
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Environment: production
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : No known dispatcher detected.
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Application: chewcandy
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Installing Net instrumentation
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:20:53 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Finished instrumentation
+[07/08/15 00:21:02 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 00:34:47 +0530 vinmac33s-MacBook-Pro.local (81633)] INFO : Starting Agent shutdown
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Environment: production
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : No known dispatcher detected.
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Application: chewcandy
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Installing Net instrumentation
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:35:00 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Finished instrumentation
+[07/08/15 00:35:08 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 00:37:02 +0530 vinmac33s-MacBook-Pro.local (81897)] INFO : Starting Agent shutdown
+[07/08/15 00:37:13 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:37:13 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:37:13 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:37:13 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Environment: production
+[07/08/15 00:37:13 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : No known dispatcher detected.
+[07/08/15 00:37:13 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Application: chewcandy
+[07/08/15 00:37:13 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:37:14 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:37:14 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:37:14 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Installing Net instrumentation
+[07/08/15 00:37:14 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:37:14 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:37:14 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:37:14 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:37:14 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:37:14 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:37:14 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Finished instrumentation
+[07/08/15 00:37:19 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 00:37:20 +0530 vinmac33s-MacBook-Pro.local (81966)] INFO : Starting Agent shutdown
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Environment: production
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : No known dispatcher detected.
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Application: chewcandy
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Installing Net instrumentation
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:37:32 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Finished instrumentation
+[07/08/15 00:37:36 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 00:37:54 +0530 vinmac33s-MacBook-Pro.local (81977)] INFO : Starting Agent shutdown
+[07/08/15 00:38:01 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:38:01 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:38:01 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:38:01 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Environment: production
+[07/08/15 00:38:01 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : No known dispatcher detected.
+[07/08/15 00:38:01 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Application: chewcandy
+[07/08/15 00:38:01 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:38:02 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:38:02 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:38:02 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Installing Net instrumentation
+[07/08/15 00:38:02 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:38:02 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:38:02 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:38:02 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:38:02 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:38:02 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:38:02 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Finished instrumentation
+[07/08/15 00:38:06 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 00:38:07 +0530 vinmac33s-MacBook-Pro.local (81992)] INFO : Starting Agent shutdown
+[07/08/15 00:38:17 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:38:17 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:38:17 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:38:17 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Environment: production
+[07/08/15 00:38:17 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : No known dispatcher detected.
+[07/08/15 00:38:17 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Application: chewcandy
+[07/08/15 00:38:17 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:38:18 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:38:18 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:38:18 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Installing Net instrumentation
+[07/08/15 00:38:18 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:38:18 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:38:18 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:38:18 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:38:18 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:38:18 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:38:18 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Finished instrumentation
+[07/08/15 00:38:21 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 00:42:27 +0530 vinmac33s-MacBook-Pro.local (82004)] INFO : Starting Agent shutdown
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Environment: production
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : No known dispatcher detected.
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Application: chewcandy
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Installing Net instrumentation
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:42:39 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Finished instrumentation
+[07/08/15 00:42:43 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 00:46:34 +0530 vinmac33s-MacBook-Pro.local (82141)] INFO : Starting Agent shutdown
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Environment: production
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : No known dispatcher detected.
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Application: chewcandy
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Installing Net instrumentation
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:46:45 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Finished instrumentation
+[07/08/15 00:46:51 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 00:46:53 +0530 vinmac33s-MacBook-Pro.local (82348)] INFO : Starting Agent shutdown
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Environment: production
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : No known dispatcher detected.
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Application: chewcandy
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Installing Net instrumentation
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:47:02 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Finished instrumentation
+[07/08/15 00:47:05 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 00:51:47 +0530 vinmac33s-MacBook-Pro.local (82363)] INFO : Starting Agent shutdown
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Starting the New Relic agent in "production" environment.
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "production" section of your newrelic.yml.
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Reading configuration from config/newrelic.yml (/Users/vinmac33/Desktop/bhatoore/candyshop)
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Environment: production
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : No known dispatcher detected.
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Application: chewcandy
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : delayed_job not available: No DJ worker present. Skipping DJ queue sampler
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Installing ActiveRecord 4 instrumentation
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Installing Net instrumentation
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Installing deferred Rack instrumentation
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Installing Rack::Builder middleware instrumentation
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Installing Rails 3+ middleware instrumentation
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Installing Rails 4 Controller instrumentation
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Installing Rails 4 view instrumentation
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Installing Rails 4 Error instrumentation
+[07/08/15 00:51:59 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Finished instrumentation
+[07/08/15 00:52:07 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1035747/applications/8770586
+[07/08/15 16:55:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[07/08/15 16:55:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.002064 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/08/15 16:56:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[07/08/15 16:56:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.002351 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/08/15 16:56:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[07/08/15 16:56:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.000682 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/08/15 16:57:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[07/08/15 16:57:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.00108 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/08/15 16:57:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[07/08/15 16:57:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.000863 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/08/15 16:58:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[07/08/15 16:58:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.000971 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/08/15 16:58:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[07/08/15 16:58:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.00064 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/08/15 16:59:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[07/08/15 16:59:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.00157 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/08/15 16:59:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[07/08/15 16:59:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.000781 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/08/15 17:00:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[07/08/15 17:00:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.000916 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/08/15 17:00:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[07/08/15 17:00:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.000559 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/08/15 17:01:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[07/08/15 17:01:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.001168 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/08/15 17:01:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[07/08/15 17:01:10 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.002301 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/08/15 20:15:49 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[07/08/15 20:15:49 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.012746 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/08/15 20:15:49 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[07/08/15 20:15:49 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.000986 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/13/15 04:54:16 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[07/13/15 04:54:16 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.000735 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/13/15 19:08:04 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Unable to send metric_data data, will try again later. Error: 
+[07/13/15 19:08:04 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : OpenSSL::SSL::SSLError: SSL_connect SYSCALL returned=5 errno=0 state=SSLv2/v3 read server hello A
+[07/13/15 19:08:04 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Error during check_for_and_handle_agent_commands, will retry later: 
+[07/13/15 19:08:04 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : OpenSSL::SSL::SSLError: SSL_connect SYSCALL returned=5 errno=0 state=SSLv2/v3 read server hello A
+[07/13/15 19:08:04 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[07/13/15 19:08:04 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : OpenSSL::SSL::SSLError: SSL_connect SYSCALL returned=5 errno=0 state=SSLv2/v3 read server hello A
+[07/13/15 19:08:23 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[07/13/15 19:08:23 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : OpenSSL::SSL::SSLError: SSL_connect SYSCALL returned=5 errno=0 state=SSLv2/v3 read server hello A
+[07/13/15 19:09:44 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[07/13/15 19:09:44 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : OpenSSL::SSL::SSLError: SSL_connect SYSCALL returned=5 errno=0 state=SSLv3 read server session ticket A
+[07/13/15 19:14:06 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Error during check_for_and_handle_agent_commands, will retry later: 
+[07/13/15 19:14:06 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : NewRelic::Agent::NewRelicService::CollectorError: RuntimeError: Server Error (IOException): java.util.concurrent.TimeoutException: Idle timeout expired: 5000/5000 ms
+[07/13/15 19:24:06 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Unable to send metric_data data, will try again later. Error: 
+[07/13/15 19:24:06 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : OpenSSL::SSL::SSLError: SSL_connect SYSCALL returned=5 errno=0 state=SSLv3 read server session ticket A
+[07/13/15 19:27:19 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[07/13/15 19:27:19 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.000635 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/13/15 19:27:44 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[07/13/15 19:27:44 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.004197 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/13/15 19:28:19 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[07/13/15 19:28:19 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.001673 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/13/15 19:28:44 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_data' in Agent Event Loop:
+[07/13/15 19:28:44 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-176.newrelic.com:443 after 0.002605 seconds: getaddrinfo: nodename nor servname provided, or not known
+[07/14/15 00:13:50 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Unable to send metric_data data, will try again later. Error: 
+[07/14/15 00:13:50 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : OpenSSL::SSL::SSLError: SSL_connect SYSCALL returned=5 errno=0 state=SSLv2/v3 read server hello A
+[07/14/15 18:02:27 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Error during check_for_and_handle_agent_commands, will retry later: 
+[07/14/15 18:02:27 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : OpenSSL::SSL::SSLError: SSL_connect SYSCALL returned=5 errno=0 state=SSLv3 read server session ticket A
+[07/14/15 18:02:42 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[07/14/15 18:02:42 +0530 vinmac33s-MacBook-Pro.local (82475)] ERROR : OpenSSL::SSL::SSLError: SSL_connect SYSCALL returned=5 errno=0 state=SSLv3 read server session ticket A
+[07/14/15 23:51:25 +0530 vinmac33s-MacBook-Pro.local (82475)] INFO : Starting Agent shutdown

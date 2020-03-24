@@ -1,0 +1,66 @@
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= I18n.t('site.blog_meta') %>" />
+<% end %>
+
+<div class="clearfix main_content floatleft">
+
+  <%= render 'blog_posts/index_slider' %>
+  
+  <div class="clearfix content">
+    <div class="content_title"><h2>Latest Blog Post</h2></div>
+    
+    <% @blog_posts.each do |post| %>
+      <div class="clearfix single_content">
+        <div class="clearfix post_date floatleft">
+          <div class="date">
+            <h3><%= post.created_at.day %></h3>
+            <p><%= post.created_at.strftime("%B") %></p>
+          </div>
+        </div>
+        <div class="clearfix post_detail">
+          <h2><%= link_to post.title.humanize, blog_post_path(post) %></h2>
+          <div class="clearfix post-meta">
+            <p>
+              <!-- <span><i class="fa fa-user"></i> Admin</span> -->
+              <span><i class="fa fa-clock-o"></i> <%= post.created_at.to_date.to_s(:long) %></span>
+              <!-- <span><i class="fa fa-comment"></i> 4 comments</span> -->
+              <% post.tag_list.each do |tag| %>
+                <a href="<%= tagged_blog_posts_path(tag) %>"><span><i class="fa fa-folder"></i> <%= tag.humanize %></span></a>
+              <% end %>
+            </p>
+          </div>
+          <div class="clearfix post_excerpt">
+            <img src="<%= post.image.url(:preview) %>" alt="<%= post.title %>"/>
+            <p class="index-post-overview"><%= post.html_overview.humanize.truncate(500) %></p>
+          </div>
+          <%= link_to 'Continue Reading', blog_post_path(post) %>
+          <% if @user.admin? %>
+            <%= link_to 'Edit', edit_blog_post_path(post) %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+    <% if @blog_posts.blank? %>
+      <p>We'll soon add posts here. Will not keep you waiting for long. :)</p>
+    <% end %>
+
+  </div>
+  
+  <% if ((@total_pages) > 1) %>
+    <div class="pagination">
+      <nav>
+        <ul>
+          <% if ((params[:page].to_i - 1) > 0) %>
+            <li><%= link_to ' <<', blog_posts_path(page: params[:page].to_i - 1) %></li>
+          <% end %>
+          <% @total_pages.times.each do |page_num| %>
+            <li><%= link_to (page_num + 1), blog_posts_path(page: page_num + 1) %></li>
+          <% end %>
+          <% if ((params[:page].to_i + 1) <= @total_pages) %>
+            <li><%= link_to ' >>', blog_posts_path(page: params[:page].to_i + 1) %></li>
+          <% end %>    
+        </ul>
+      </nav>
+    </div>
+  <% end %>
+</div>

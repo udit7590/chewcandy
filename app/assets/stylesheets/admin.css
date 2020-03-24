@@ -1,0 +1,86 @@
+.control-group {
+  margin-top: 10px;
+}
+
+.control-group label {
+  color: blue;
+  width: 220px;
+  float: left;
+}
+
+.control-group .btn {
+  margin-top: 50px;
+  width: 150px;
+  margin-left: 250px;
+  padding: 10px;
+  background-color: #ccc;
+  color: black;
+  font-size: 14px;
+}
+
+.clear {
+  clear: both;
+}
+
+.back-link {
+  color: #fff;
+  background-color: #0099cc;
+  padding: 10px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  background-color: #0C2C52;  
+}
+
+.main-nav-link {
+  color: #000;
+  background-color: #FFCC00;
+  padding: 10px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.main-nav-link:hover {
+  background-color: #993366;
+  color: #fff;
+}
+
+.sub-nav-link {
+  color: #fff;
+  background-color: #66ccff;
+  padding: 10px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.sub-nav-link:hover {
+  background-color: #0099cc;
+}
+
+.action-link {
+  color: #fff;
+  background-color: #097054;
+  padding: 10px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.action-link-del {
+  color: #fff;
+  background-color: #B22222;
+  padding: 10px;
+  font-size: 16px;
+  text-decoration: none;
+
+}
+
+.action-link:hover, .action-link-del:hover {
+  background-color: #FFDE00;
+  color: black;
+}
+
+.horizontal-line {
+  border-bottom: 4px solid #000;
+}

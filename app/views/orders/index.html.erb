@@ -1,0 +1,55 @@
+<div class="admin-section" style="margin: auto; width: 1000px">
+
+  <%= render 'admin_shared/flash' %>
+
+  <%= render 'admin_shared/navigation' %>
+  <br />
+  <%= link_to 'Placed Orders', filter_orders_path(by: :placed), class: 'sub-nav-link' %>
+  <%= link_to 'Pending Deliveries', filter_orders_path(by: :dispatched), class: 'sub-nav-link' %>
+  <%= link_to 'Pending Payments', filter_orders_path(by: :delievered), class: 'sub-nav-link' %>
+  <%= link_to 'Cancelled', filter_orders_path(by: :cancelled), class: 'sub-nav-link' %>
+  <%= link_to 'Completed', filter_orders_path(by: :payment_received), class: 'sub-nav-link' %>
+  <%= link_to 'Refunded', filter_orders_path(by: :refunded), class: 'sub-nav-link' %>
+  <%= link_to 'All', filter_orders_path(by: :unscoped), class: 'sub-nav-link' %>
+
+  <br /><br />
+  <% if @orders.present? %>
+      <div>
+        <table border="1" style="border-collapse: collapse;">
+          <thead>
+            <tr>
+              <td>#</td>
+              <td>User</td>
+              <td>Placed on</td>
+              <td>State</td>
+              <td>Shipping Address</td>
+              <td>Billing Address</td>
+              <td>Amount</td>
+              <td>Actions</td>
+            </tr>
+          </thead>
+          <tbody>
+            <% @orders.each do |order| %>
+              <tr>
+                <td><%= order.identifier %></td>
+                <td title="<%= order.user.email %>"><%= order.user.name %><span><%= '(Guest)' if order.user.guest? %></span></td>
+                <td><%= order.created_at.to_s(:long) %></td>
+                <td><%= order.state.humanize %></td>
+                <td><%= order.user.full_shipping_address %></td>
+                <td><%= order.user.full_billing_address %></td>
+                <td><span class='text-unit'>INR </span><%= order.net_amount %></td>
+                <td>
+                  <%= link_to 'View', order_path(order), class: 'action-link' %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+      </div>
+      <br />
+      <%= paginate @orders %>
+  <% else %>
+    <p style="color: red">No orders present</p>
+  <% end %>
+</div>

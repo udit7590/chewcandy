@@ -1,0 +1,16 @@
+<tr>
+  <td><%= order.identifier %></td>
+  <td><%= order.created_at.to_s(:long) %></td>
+  <td class="special-text-blue"><%= order.state.humanize %></td>
+  <td><%= order.total_quantity %> <span class='text-unit'>Grams</span></td>
+  <td><span class='text-unit'>INR </span><%= order.total_price_including_taxes_and_shipping %></td>
+  <td>
+    <%= link_to 'View', users_order_path(order), class: 'btn btn-info' %>
+    <% if order.placed? %>
+      <%= link_to 'Cancel', cancel_users_order_path(order), class: 'btn btn-warning', method: :patch, data: { confirm: 'Are you sure you want to cancel your order?' } %>
+    <% elsif order.refundable? %>
+      <%= render partial: 'modals/refund', locals: { order: order } %>
+      <a type="button" data-toggle="modal" data-target="#refundModal" class='btn btn-danger'>Return</a>
+    <% end %>
+  </td>
+</tr>

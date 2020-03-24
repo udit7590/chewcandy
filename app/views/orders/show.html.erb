@@ -1,0 +1,75 @@
+<div class="admin-section" style="margin: auto; width: 1000px">
+  <%= render 'admin_shared/flash' %>
+
+  <%= render 'admin_shared/navigation' %>
+  
+  <br /><br />
+  <% if @order %>
+    <div>
+      <p><strong>ID:</strong> <%= @order.id %></p>
+      <p><strong>UID:</strong> <%= @order.number %></p>
+      <p><strong>User:</strong> <%= @order.user.name %></p>
+      <p><strong>Price:</strong> INR <%= @order.total_price_including_taxes_and_shipping %></p>
+      <p><strong>Placed On:</strong> <%= @order.created_at.to_s(:long) %></p>
+      
+      <h3>Order State</h3>
+      <p style="color: orange"><%= @order.state.humanize %> (<%= @order.updated_at.to_s(:long) %>)</p>
+
+      <h3>Order Process</h3>
+      <% Order::FROM_STATE_TO_STATES[@order.state.to_sym].each do |event| %>
+        <%= link_to Order::STATE_EVENT_NAME[event.to_sym], change_state_order_path(new_state: Order::STATE_EVENT_NAME[event.to_sym]), method: :post, data: { confirm: 'Are you sure?' } %> &nbsp;
+      <% end %>
+
+      <h3>Order Details</h3>
+      <table border="1" style="border-collapse: collapse;">
+        <thead>
+          <tr>
+            <td>#</td>
+            <td>Product Name</td>
+            <td>Quantity</td>
+            <td>Amount</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% @order.shopping_cart.shopping_cart_items.each_with_index do |item, index| %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td><%= link_to item.product.name, product_path(item.product.id) %></td>
+              <td><%= item.quantity %> Grams</td>
+              <td>INR <%= item.amount_with_tax_and_shipping %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      
+      <br />
+      <h3>User Shipping Address</h3>
+      <p><%= @order.user.full_shipping_address %></p>
+      <p><strong>Verified?: </strong><%= !!@order.user.shipping_address.try(:verified_at) %></p>
+      
+      <br />
+      <h3>User Billing Address</h3>
+      <p><%= @order.user.full_billing_address %></p>
+      <p><strong>Verified?: </strong><%= !!@order.user.billing_address.try(:verified_at) %></p>
+      
+      <br />
+      <% if @order.coupon_code.present? %>
+        <h3>Discount Info</h3>
+        <p><strong>Code Used:</strong> <%= @order.coupon_code %></p>
+        <p><strong>Amount:</strong> INR <%= @order.discount_amount %></p>
+      <% end %>
+
+      <br />
+      <% if @order.refund.present? %>
+        <h3>Refund Info</h3>
+        <p><strong>Amount:</strong> INR <%= @order.refund.amount %></p>
+        <p><strong>Placed On:</strong> <%= @order.refund.created_at.to_s(:long) %></p>
+        <p>Refund State: <span style="color: orange"><%= @order.refund.status %></span></p>
+      <% end %>
+
+      <br /><hr />
+      <%= link_to 'Back to orders', orders_path, class: 'back-link' %>
+
+    </div>
+  <% end %>
+</div>

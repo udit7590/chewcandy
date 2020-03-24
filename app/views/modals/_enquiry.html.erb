@@ -1,0 +1,31 @@
+<!-- Modal -->
+<div class="modal fade hidden special-modal action-modal" id="enquiryModal" tabindex="-1" role="dialog" aria-labelledby="enquiryModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+ 
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"></span></button>
+        <h4 class="modal-title" id="myModalLabel">Please give us a brief description. We'll get back to you!</h4>
+      </div>
+ 
+      <div class="modal-body">
+        <br />
+        <%= form_for(Enquiry.new, url: enquiries_path, method: :post, remote: true) do |f| %>
+        <%= f.select :about, Enquiry::ABOUT, { prompt: 'Enquire About' }, class: 'span4 address-select', required: true %>
+          <% if @user.guest? %>
+          <%= f.text_field :from_name, placeholder: 'Your Name*', required: true %><br />
+          <%= f.text_field :from_email, placeholder: 'Your Email*', required: true %><br />
+          <% end %>
+          <%= f.text_area :message, placeholder: 'Message*', rows: 10, required: true %>
+        <br />
+            
+      </div>
+
+      <div class="modal-footer">
+        <%= f.submit 'Send', class: 'button button-sp' %>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>

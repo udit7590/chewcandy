@@ -27,7 +27,7 @@ gem 'spring', '~>1.3.6',        group: :development
 
 gem 'thin', '~> 1.6.2'
 gem 'paperclip', '~> 4.2.1'
-gem 'devise', '~> 3.4.1'
+gem 'devise', '~> 4.7.1'
 gem 'acts_as_shopping_cart', '~> 0.2.1'
 
 gem 'ckeditor'

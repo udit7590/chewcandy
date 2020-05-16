@@ -92,6 +92,16 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: "#{Rails.root}/config/s3.yml",
+    url: ':s3_domain_url',
+    bucket: ENV['S3_BUCKET'],
+    path: '/:class/:attachment/:id_partition/:style/:filename',
+    default_url: '/images/:attachment/missing_:style.jpg'
+  }
+
+
   # config.paperclip_defaults = {
   #   path: ':rails_root/../shared/public/system/:attachment/:id/:style/:filename'
   # }

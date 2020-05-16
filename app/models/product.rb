@@ -29,7 +29,7 @@ class Product < ActiveRecord::Base
   validates :min_quantity_unit, inclusion: { in: MIN_QUANTITY_UNIT_TYPES }
 
   validates_attachment_content_type :image, content_type: %w(image/jpg image/jpeg image/png)
-  validates_attachment_size :image, less_than: 2.megabyte, 
+  validates_attachment_size :image, less_than: 5.megabyte, 
                             unless: Proc.new { |image| image.image_file_name.blank? }
 
   # ------------------------------------------------------------------------------------------

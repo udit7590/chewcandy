@@ -76,8 +76,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'pure-depths-8802.herokuapp.com' }
-  config.action_mailer.default_options     = { from: 'site@chewcandy.com' }
+  config.action_mailer.default_url_options = { host: 'chewcandy.herokuapp.com' }
+  config.action_mailer.default_options     = { from: 'site-chewcandy@booleans.in' }
 
   # Mailtrap: udit7590@yahoo.com # Vinsol@123
   config.action_mailer.delivery_method = :smtp

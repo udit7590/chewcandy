@@ -76,8 +76,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'chewcandy.com' }
-  config.action_mailer.default_options     = { from: 'site@chewcandy.com' }
+  config.action_mailer.default_url_options = { host: 'booleans.in' }
+  config.action_mailer.default_options     = { from: 'chewcandy@booleans.in' }
 
   config.action_mailer.delivery_method = :smtp
 
@@ -86,7 +86,7 @@ Rails.application.configure do
     user_name: Rails.application.secrets.sendgrid['username'],
     password: Rails.application.secrets.sendgrid['password'],
     address: 'smtp.sendgrid.net',
-    domain: 'chewcandy.com',
+    domain: 'booleans.in',
     port: 587,
     authentication: :plain,
     enable_starttls_auto: true

@@ -1,13 +1,13 @@
 class UserMailer < ApplicationMailer
   layout 'user_email'
 
-  default from: 'orders@chewcandy.com'
+  default from: 'orders-chewcandy@booleans.in'
 
   def notify_user_registrered(user_id)
     @user = User.find_by(id: user_id)
     return nil unless @user
 
-    mail(to: @user.email, from: 'site@chewcandy.com', subject: 'Welcome to Chew Candy. Best place to satiate your crave for candies.')
+    mail(to: @user.email, from: 'orders-chewcandy@booleans.in', subject: 'Welcome to Chew Candy. Best place to satiate your crave for candies.')
   end
 
   def notify_user_about_order_state_change(user_id, order_id)

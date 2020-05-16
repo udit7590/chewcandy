@@ -1,10 +1,10 @@
 en:
   site:
     name: 'ChewCandy'
-    footer: '&copy; ChewCandy 2015 All Rights Reserved'
-    contact_email: 'chewcandy2015@gmail.com'
-    contact_number: '+91-9999075570'
-    contact_address: 'Patel Nagar, Delhi, India'
+    footer: '&copy; ChewCandy 2020 All Rights Reserved'
+    contact_email: 'chewcandy@example.com'
+    contact_number: '+1-XXX-XXX-XXXX'
+    contact_address: 'Chicago, United States'
     tag_line: 'Nothing as sweet as our candies'
     logo_path: '/assets/images/logo.png'
     concept: 'ChewCandy is a one stop solution for all your candies needs. We bring candies from all over the world right at your door steps. And we also have a unique concept where you can choose how much of each candy type you need and you can accordingly build your order.'

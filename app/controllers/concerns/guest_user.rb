@@ -41,7 +41,7 @@ module GuestUser
         guest_user_shopping_cart.shopping_cart_items.each do |shopping_cart_item|
           shopping_cart_item.change_cart_id(user.shopping_cart.id)
         end
-        guest_user.shopping_cart(true).destroy
+        guest_user.shopping_cart.destroy
       end
     else      
       shopping_cart = guest_user.shopping_cart

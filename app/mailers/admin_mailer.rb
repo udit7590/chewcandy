@@ -1,6 +1,6 @@
 class AdminMailer < ApplicationMailer
 
-  default from: 'orders@chewcandy.com'
+  default from: 'orders-chewcandy@booleans.in'
 
   def order_received(admin_ids, user_id, order_id)
     @user = User.find_by(id: user_id)

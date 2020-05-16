@@ -894,3 +894,6 @@ p {
         margin-top:30px;
     }
 }
+.img-responsive {
+  margin: auto;
+}

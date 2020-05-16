@@ -1,6 +1,7 @@
 <!-- Footer section start -->
 <div class="footer">
   <p><%= I18n.t('site.footer').html_safe %></p>
+  <p><span style="margin-left: 16.5%"><%= render 'snippets/fb_like' %></span></p>
   <p>
     <%= link_to 'About Us', about_us_path, class: 'footer-static-links' %> |
     <%= link_to 'Our Privacy Policy', privacy_policy_path, class: 'footer-static-links' %> |

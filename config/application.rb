@@ -26,6 +26,7 @@ module Candyshop
     config.assets.paths << Rails.root.join("vendor", "assets", "yellow-blog-html", "fonts")
 
     config.autoload_paths += %W( #{config.root}/app/decorators )
+    config.autoload_paths += %w(#{config.root}/app/models/ckeditor)
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]

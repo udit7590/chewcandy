@@ -1,4 +1,4 @@
-class CreateJoinTableCriteriaDiscounts < ActiveRecord::Migration
+class CreateJoinTableCriteriaDiscounts < ActiveRecord::Migration[5.2]
   def change
     create_join_table :discounts, :criteria do |t|
       

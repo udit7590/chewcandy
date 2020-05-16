@@ -1,4 +1,4 @@
-class CreateJoinTableDiscountsOrders < ActiveRecord::Migration
+class CreateJoinTableDiscountsOrders < ActiveRecord::Migration[5.2]
   def change
     create_join_table :discounts, :orders do |t|
       

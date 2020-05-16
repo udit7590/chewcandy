@@ -14,6 +14,7 @@ Rails.application.config.assets.precompile += %w(
   order/order_form.js
   bootstrap_tours/home.js
   blog_theme.js
+  ckeditor/config.js
 )
 
 # Add Stylesheets

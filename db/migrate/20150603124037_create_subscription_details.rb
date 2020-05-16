@@ -1,4 +1,4 @@
-class CreateSubscriptionDetails < ActiveRecord::Migration
+class CreateSubscriptionDetails < ActiveRecord::Migration[5.2]
   def change
     create_table :subscription_details do |t|
       t.references :subscription

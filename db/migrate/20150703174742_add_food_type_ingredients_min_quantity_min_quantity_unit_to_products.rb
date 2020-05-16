@@ -1,4 +1,4 @@
-class AddFoodTypeIngredientsMinQuantityMinQuantityUnitToProducts < ActiveRecord::Migration
+class AddFoodTypeIngredientsMinQuantityMinQuantityUnitToProducts < ActiveRecord::Migration[5.2]
   def change
     add_column :products, :ingredients, :text, limit: 1000
     add_column :products, :food_type, :string, default: 'vegetarian' # In vegetarian / non_vegetarian

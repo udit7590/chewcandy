@@ -26,7 +26,9 @@ gem 'sdoc',          group: :doc
 gem 'spring',        group: :development
 
 gem 'paperclip'
+gem 'aws-sdk'
 gem 'devise'
+
 gem 'acts_as_shopping_cart'
 
 gem 'ckeditor'
@@ -63,11 +65,12 @@ end
 
 group :development, :test do
   gem 'byebug'
+  gem 'dotenv-rails', '~> 2.2', require: 'dotenv/rails-now'
 end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'rspec-rails'
 end
 # Use ActiveModel has_secure_password

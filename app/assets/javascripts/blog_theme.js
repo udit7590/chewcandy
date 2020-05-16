@@ -15,4 +15,4 @@
 //= require js/selectnav.min.js
 //= require js/pgwslider.js
 //= require js/placeholder_support_IE.js
-//= require ckeditor/init
+//= require ckeditor/config

@@ -8,8 +8,8 @@ class Enquiry < ActiveRecord::Base
     'Other'
   ]
 
-  validate :about, :message, presence: true
-  validate :from_name, :from_email, presence: true, unless: :user_present?
+  validates :about, :message, presence: true
+  validates :from_name, :from_email, presence: true, unless: :user_present?
 
   after_create :mail_it
 

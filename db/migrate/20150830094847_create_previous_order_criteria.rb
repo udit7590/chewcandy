@@ -1,4 +1,4 @@
-class CreatePreviousOrderCriteria < ActiveRecord::Migration
+class CreatePreviousOrderCriteria < ActiveRecord::Migration[5.2]
   def change
     create_table :previous_order_criteria do |t|
       t.decimal :minimum_previous_orders_amount

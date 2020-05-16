@@ -1,4 +1,4 @@
-class CreateEnquiry < ActiveRecord::Migration
+class CreateEnquiry < ActiveRecord::Migration[5.2]
   def change
     create_table :enquiries do |t|
       t.references :user

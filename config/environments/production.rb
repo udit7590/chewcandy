@@ -83,8 +83,8 @@ Rails.application.configure do
 
   # For production servers
   config.action_mailer.smtp_settings = {
-    user_name: Rails.application.secrets.sendgrid['username'],
-    password: Rails.application.secrets.sendgrid['password'],
+    user_name: ENV["SENDGRID_USERNAME"],
+    password: ENV["SENDGRID_PASSWORD"],
     address: 'smtp.sendgrid.net',
     domain: 'booleans.in',
     port: 587,

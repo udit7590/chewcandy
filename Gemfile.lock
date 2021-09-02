@@ -1144,7 +1144,7 @@ GEM
     rake (13.0.1)
     razorpay (2.4.1)
       httparty (~> 0.14)
-    rdoc (6.2.1)
+    rdoc (6.3.2)
     request_store (1.5.0)
       rack (>= 1.4)
     responders (3.0.0)
